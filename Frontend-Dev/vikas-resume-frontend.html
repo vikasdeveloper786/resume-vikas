@@ -1,0 +1,2999 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vikas Arora | Frontend Developer</title>
+    <meta
+      name="description"
+      content="Vikas Arora - Frontend Developer: Figma design, React/Next.js interfaces and AWS deployment, with AI-assisted workflows across every phase."
+    />
+    <link rel="icon" href="./vikas-resume/tm-logo.svg" />
+    <meta property="og:title" content="Vikas Arora | Frontend Developer" />
+    <meta
+      property="og:description"
+      content="11+ years across design, development and deployment — AI-assisted at every phase."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link href="./vikas-resume/css2" rel="stylesheet" />
+    <style>
+      :root {
+        --brand: #1e3a8a;
+        --brand-2: #3b6cc4;
+        --brand-ink: #1e3a8a;
+        --violet: #c8993a;
+        --cyan: #6b94dd;
+        --radius: 16px;
+        --ink-hero: #eef3fc;
+        --hero-1: #070f1f;
+        --hero-2: #0b1a33;
+        --hero-3: #0e2244;
+        --page: #f5f7fb;
+        --surface: #ffffff;
+        --surface-2: #f8fafc;
+        --text: #0f1b2d;
+        --muted: #566178;
+        --line: #e2e8f0;
+        --shadow: 0 10px 30px rgba(15, 27, 45, 0.07);
+        --shadow-lg: 0 22px 60px rgba(15, 27, 45, 0.12);
+      }
+
+      html[data-theme="dark"] {
+        --brand-ink: #9db8ee;
+        --page: #070e1c;
+        --surface: #0c1729;
+        --surface-2: #101e36;
+        --text: #e8eef9;
+        --muted: #94a5c0;
+        --line: #1d2d4a;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 22px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--text);
+        font:
+          15px/1.7 Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Plus Jakarta Sans", Inter, sans-serif;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .wrap {
+        width: min(1180px, 100% - 40px);
+        margin-inline: auto;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--brand-2);
+        outline-offset: 3px;
+        border-radius: 8px;
+      }
+
+      /* ---------- header ---------- */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: color-mix(in srgb, var(--surface) 88%, transparent);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        height: 72px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-right: auto;
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand b {
+        display: block;
+        font-family: "Plus Jakarta Sans";
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+      }
+
+      .brand small {
+        display: block;
+        font-size: 10.5px;
+        letter-spacing: 0.16em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .menu {
+        display: flex;
+        gap: 26px;
+        font-weight: 500;
+        font-size: 14.5px;
+        color: var(--muted);
+      }
+
+      .menu a {
+        position: relative;
+        padding: 6px 0;
+      }
+
+      .menu a:hover {
+        color: var(--text);
+      }
+
+      .menu a.active {
+        color: var(--brand-ink);
+        font-weight: 600;
+      }
+
+      .menu a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 2px;
+        background: var(--brand);
+        border-radius: 2px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 10px;
+        padding: 11px 18px;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--text);
+        cursor: pointer;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn.primary {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+        box-shadow: 0 8px 22px rgba(30, 58, 138, 0.28);
+      }
+
+      .btn.ghost-dark {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.18);
+        color: #fff;
+      }
+
+      .toggle {
+        width: 66px;
+        height: 34px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        color: var(--muted);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .toggle .knob {
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        translate: 0 -50%;
+        background: var(--brand);
+        box-shadow: 0 2px 8px rgba(30, 58, 138, 0.38);
+        transition: transform 0.28s cubic-bezier(0.4, 1.4, 0.5, 1);
+      }
+
+      html[data-theme="dark"] .toggle .knob {
+        transform: translateX(32px);
+      }
+
+      .toggle svg {
+        width: 15px;
+        height: 15px;
+        display: block;
+        position: relative;
+        z-index: 1;
+        transition:
+          color 0.22s ease,
+          opacity 0.22s ease;
+      }
+
+      .toggle .ico-sun {
+        color: #fff;
+      }
+
+      .toggle .ico-moon {
+        color: var(--muted);
+        opacity: 0.72;
+      }
+
+      html[data-theme="dark"] .toggle .ico-sun {
+        color: var(--muted);
+        opacity: 0.72;
+      }
+
+      html[data-theme="dark"] .toggle .ico-moon {
+        color: #fff;
+        opacity: 1;
+      }
+
+      .toggle:hover .ico-sun,
+      .toggle:hover .ico-moon {
+        opacity: 1;
+      }
+
+      .toggle:focus-visible {
+        outline: 2px solid var(--brand);
+        outline-offset: 3px;
+      }
+
+      .burger {
+        display: none;
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 9px 11px;
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        background:
+          radial-gradient(900px 520px at 78% 34%, rgba(59, 108, 196, 0.3), transparent 62%),
+          radial-gradient(700px 480px at 12% 0%, rgba(200, 153, 58, 0.2), transparent 60%),
+          linear-gradient(150deg, var(--hero-1), var(--hero-2) 55%, var(--hero-3));
+        color: var(--ink-hero);
+        padding: 64px 0 54px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .heroGrid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 48px;
+        align-items: center;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid rgba(157, 184, 238, 0.45);
+        background: rgba(30, 58, 138, 0.16);
+        color: #9db8ee;
+        border-radius: 999px;
+        padding: 7px 15px;
+        font-size: 12.5px;
+        font-weight: 600;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 5.2vw, 58px);
+        line-height: 1.08;
+        margin: 22px 0 18px;
+        font-weight: 800;
+      }
+
+      .hero h1 em {
+        font-style: normal;
+        background: linear-gradient(92deg, #9db8ee, #dce8fb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero p.lead {
+        color: #a9b9d3;
+        font-size: 16px;
+        max-width: 56ch;
+        margin: 0;
+      }
+
+      .heroActions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 30px 0 34px;
+      }
+
+      .icoBtn {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        color: #dce8fb;
+        transition: 0.2s;
+      }
+
+      .icoBtn:hover {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      .statsRow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.045);
+        overflow: hidden;
+      }
+
+      .statsRow div {
+        padding: 16px 14px;
+        text-align: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .statsRow div:last-child {
+        border-right: 0;
+      }
+
+      .statsRow b {
+        display: block;
+        font-family: "Plus Jakarta Sans";
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .statsRow span {
+        font-size: 12.5px;
+        color: #92a6c6;
+      }
+
+      .s1 {
+        color: #7ea3e8;
+      }
+
+      .s2 {
+        color: #e0b457;
+      }
+
+      .s3 {
+        color: #6b94dd;
+      }
+
+      .heroArt {
+        position: relative;
+        display: grid;
+        place-items: center;
+        min-height: 430px;
+        container-type: inline-size;
+      }
+
+      .glow {
+        position: absolute;
+        width: min(440px, 86%);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background: radial-gradient(circle, rgba(30, 58, 138, 0.55), rgba(30, 58, 138, 0.06) 62%, transparent 70%);
+      }
+
+      /* ---------- rotating icon orbit ---------- */
+      .orbit {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        pointer-events: none;
+        --size: min(392px, 88cqw);
+        --r: calc(var(--size) / 2);
+        width: var(--size);
+        height: var(--size);
+      }
+
+      .orbit .chipIco {
+        pointer-events: auto;
+      }
+
+      .orbitRing {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 1px solid rgba(190, 208, 245, 0.26);
+        box-shadow:
+          0 0 0 1px rgba(190, 208, 245, 0.05) inset,
+          0 0 60px rgba(30, 58, 138, 0.12) inset;
+        animation: orbitSpin 34s linear infinite;
+      }
+
+      .orbitRing::before {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 1px dashed rgba(190, 208, 245, 0.14);
+      }
+
+      .orbitSlot {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 48px;
+        height: 48px;
+        transform: translate(-50%, -50%) rotate(var(--a)) translateY(calc(var(--r) * -1)) rotate(calc(var(--a) * -1));
+      }
+
+      .orbitSlot .chipIco {
+        animation: orbitSpin 34s linear infinite reverse;
+      }
+
+      .orbit:has(.chipIco:hover) .orbitRing,
+      .orbit:has(.chipIco:hover) .chipIco,
+      .orbit:focus-within .orbitRing,
+      .orbit:focus-within .chipIco {
+        animation-play-state: paused;
+      }
+
+      @keyframes orbitSpin {
+        from {
+          rotate: 0deg;
+        }
+
+        to {
+          rotate: 360deg;
+        }
+      }
+
+      .chipIco {
+        position: relative;
+        z-index: 3;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: rgba(7, 15, 31, 0.82);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      }
+
+      .chipIco svg {
+        width: 24px;
+        height: 24px;
+        transition: scale 0.25s ease;
+      }
+
+      .chipIco {
+        cursor: help;
+        transition:
+          scale 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.3),
+          border-color 0.25s,
+          box-shadow 0.25s;
+      }
+
+      .chipIco:hover,
+      .chipIco:focus-visible {
+        scale: 1.22;
+        z-index: 8;
+        border-color: rgba(190, 208, 245, 0.55);
+        box-shadow:
+          0 16px 38px rgba(0, 0, 0, 0.55),
+          0 0 0 6px rgba(59, 108, 196, 0.13);
+      }
+
+      .chipIco:hover svg {
+        scale: 1.08;
+      }
+
+      .chipIco::after {
+        content: attr(data-tip);
+        position: absolute;
+        top: calc(100% + 14px);
+        left: 50%;
+        width: max-content;
+        max-width: 190px;
+        padding: 9px 12px;
+        border-radius: 11px;
+        background: rgba(5, 12, 26, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        color: #d3def0;
+        font:
+          500 12px/1.45 Inter,
+          sans-serif;
+        letter-spacing: 0.01em;
+        text-align: center;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+        opacity: 0;
+        pointer-events: none;
+        translate: -50% 8px;
+        transition:
+          opacity 0.22s ease,
+          translate 0.22s ease;
+        z-index: 9;
+      }
+
+      .chipIco:hover::after,
+      .chipIco:focus-visible::after {
+        opacity: 1;
+        translate: -50% 0;
+      }
+
+      .codeBg {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(322px, 72cqw);
+        height: min(282px, 64cqw);
+        border-radius: 20px;
+        overflow: hidden;
+        background: rgba(5, 12, 26, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        font:
+          500 clamp(8.5px, 2.05cqw, 11.5px)/1.95 ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace;
+        -webkit-mask-image: radial-gradient(125% 92% at 50% 44%, #000 34%, transparent 80%);
+        mask-image: radial-gradient(125% 92% at 50% 44%, #000 34%, transparent 80%);
+      }
+
+      .codeBg .bar {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .codeBg .bar i {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+      }
+
+      .codeBg .bar span {
+        margin-left: 7px;
+        font:
+          600 11px Inter,
+          sans-serif;
+        color: #6f84a6;
+        letter-spacing: 0.02em;
+      }
+
+      .codeBg pre {
+        margin: 0;
+        padding: 16px 20px;
+        color: #7f93b3;
+        white-space: pre;
+        overflow: hidden;
+        opacity: 0.85;
+      }
+
+      .tk {
+        color: #c74a94;
+      }
+
+      .tf {
+        color: #4a86c9;
+      }
+
+      .ts {
+        color: #3f9e78;
+      }
+
+      .tv {
+        color: #c99a3c;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .orbitRing,
+        .orbitSlot .chipIco {
+          animation: none;
+        }
+      }
+
+      /* ---------- sections ---------- */
+      section {
+        padding: 64px 0;
+      }
+
+      .head {
+        margin-bottom: 28px;
+      }
+
+      .head h2 {
+        font-size: clamp(24px, 3vw, 31px);
+        font-weight: 800;
+        position: relative;
+        padding-bottom: 12px;
+      }
+
+      .head h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 52px;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--brand);
+      }
+
+      .head p {
+        color: var(--muted);
+        margin: 14px 0 0;
+        max-width: 62ch;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .aboutGrid {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 36px;
+        align-items: start;
+      }
+
+      .photoFrame {
+        position: relative;
+        border-radius: 18px;
+        padding: 0px;
+        background: linear-gradient(150deg, var(--brand), var(--brand-2));
+        box-shadow: var(--shadow-lg);
+      }
+
+      .photoFrame img {
+        display: block;
+        border-radius: 12px;
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: 50% 22%;
+      }
+
+      .aboutText p {
+        color: var(--muted);
+        margin: 0 0 14px;
+      }
+
+      .sign {
+        font-family: Caveat, cursive;
+        font-size: 30px;
+        color: var(--text);
+        opacity: 0.85;
+        margin-top: 6px;
+      }
+
+      /* experience timeline */
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+        position: relative;
+      }
+
+      .timeline .climb {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 120px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .timeline article.tl {
+        position: relative;
+        z-index: 1;
+        transition: translate 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+      }
+
+      .timeline article.tl:nth-of-type(1) {
+        margin-top: 56px;
+      }
+
+      .timeline article.tl:nth-of-type(2) {
+        margin-top: 28px;
+      }
+
+      .timeline article.tl:hover {
+        translate: 0 -6px;
+      }
+
+      .timeline article.tl:hover .bubble {
+        scale: 1.08;
+      }
+
+      .tl .bubble {
+        transition: scale 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.3);
+      }
+
+      @media (max-width: 980px) {
+        .timeline .climb {
+          display: none;
+        }
+
+        .timeline article.tl:nth-of-type(1),
+        .timeline article.tl:nth-of-type(2) {
+          margin-top: 0;
+        }
+      }
+
+      .tl {
+        position: relative;
+        padding-left: 0;
+      }
+
+      .tl .bubble {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        margin-bottom: 16px;
+        box-shadow: 0 10px 24px rgba(30, 58, 138, 0.28);
+        position: relative;
+        z-index: 1;
+      }
+
+      .tl h3 {
+        font-size: 17px;
+      }
+
+      .tl .co {
+        font-weight: 700;
+        color: var(--brand-ink);
+        margin: 3px 0 8px;
+      }
+
+      .tl .when {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 11px;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--brand) 10%, transparent);
+        color: var(--brand-ink);
+        margin-bottom: 10px;
+      }
+
+      .tl.green .when {
+        background: rgba(30, 58, 138, 0.12);
+        color: #1e3a8a;
+      }
+
+      /* projects */
+      .railWrap {
+        position: relative;
+      }
+
+      .rail {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding: 6px 2px 18px;
+        scrollbar-width: thin;
+      }
+
+      .rail::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .rail::-webkit-scrollbar-thumb {
+        background: var(--line);
+        border-radius: 99px;
+      }
+
+      .proj {
+        flex: 0 0 380px;
+        min-width: 0;
+        scroll-snap-align: start;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        transition: 0.25s;
+      }
+
+      .proj:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--brand-2);
+      }
+
+      .pmedia {
+        position: relative;
+        container-type: inline-size;
+      }
+
+      .cover {
+        aspect-ratio: 16/10;
+        position: relative;
+        overflow: hidden;
+        color: #eef8ff;
+        padding: 5cqw 5cqw 21cqw;
+        display: flex;
+        gap: 3cqw;
+        background:
+          radial-gradient(38cqw 38cqw at 92% 8%, color-mix(in srgb, var(--c1) 26%, transparent), transparent 70%),
+          radial-gradient(42cqw 42cqw at 4% 98%, color-mix(in srgb, var(--c2) 24%, transparent), transparent 70%),
+          linear-gradient(145deg, #070f1f, #0c2347 55%, #14203f);
+      }
+
+      .cover .cnum {
+        position: absolute;
+        top: 5cqw;
+        right: 5cqw;
+        font:
+          700 3.6cqw/1 Inter,
+          sans-serif;
+        color: #9cc0ff;
+        background: #12305c;
+        border: 1px solid #2c5a96;
+        border-radius: 99px;
+        padding: 1.6cqw 3.4cqw;
+      }
+
+      .cover .ctext {
+        flex: 1;
+        min-width: 0;
+        align-self: center;
+      }
+
+      .cover .ctext b {
+        display: block;
+        font-family: "Plus Jakarta Sans", Inter, sans-serif;
+        font-weight: 800;
+        font-size: 7cqw;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+
+      .cover .ctext em {
+        display: block;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.5cqw;
+        letter-spacing: 0.12em;
+        color: var(--c1);
+        margin: 2.4cqw 0 1.4cqw;
+      }
+
+      .cover .ctext span {
+        display: block;
+        font-size: 3.4cqw;
+        line-height: 1.45;
+        color: #a7b8d4;
+      }
+
+      .cover .cui {
+        width: 30cqw;
+        flex: none;
+        align-self: center;
+        border-radius: 4cqw;
+        padding: 3cqw;
+        background: #0a1630;
+        border: 1px solid #24406f;
+        display: grid;
+        gap: 2cqw;
+      }
+
+      .cover .cui i {
+        display: block;
+        border-radius: 99px;
+        background: #3a5f9a80;
+        height: 2.4cqw;
+      }
+
+      .cover .cui i:first-child {
+        height: 9cqw;
+        border-radius: 3cqw;
+        background: linear-gradient(135deg, var(--c1), var(--c2));
+        opacity: 0.8;
+      }
+
+      .cover .cui i:nth-child(3) {
+        width: 70%;
+      }
+
+      .plogo {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        height: 42px;
+        min-width: 42px;
+        padding: 0 10px;
+        border-radius: 11px;
+        background: #fff;
+        border: 1px solid rgba(15, 27, 45, 0.1);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+        display: grid;
+        place-items: center;
+        font:
+          800 14px/1 "Plus Jakarta Sans",
+          Inter,
+          sans-serif;
+        color: #0f1b2d;
+        letter-spacing: 0.04em;
+      }
+
+      .pb {
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        flex: 1;
+      }
+
+      .pb h3 {
+        font-size: 17px;
+      }
+
+      .badge {
+        align-self: flex-start;
+        font-size: 11.5px;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--brand) 10%, transparent);
+        color: var(--brand-ink);
+      }
+
+      .badge.v {
+        background: rgba(200, 153, 58, 0.12);
+        color: #c8993a;
+      }
+
+      .pb p {
+        color: var(--muted);
+        font-size: 13.8px;
+        margin: 0;
+        flex: 1;
+      }
+
+      .pb a {
+        color: var(--brand-ink);
+        font-weight: 600;
+        font-size: 13.8px;
+      }
+
+      .arw {
+        position: absolute;
+        top: 38%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        color: var(--text);
+        cursor: pointer;
+        z-index: 5;
+      }
+
+      .arw.l {
+        left: -18px;
+      }
+
+      .arw.r {
+        right: -18px;
+      }
+
+      .arw:disabled {
+        opacity: 0.35;
+        cursor: default;
+      }
+
+      /* dashboard band */
+      .band {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .band > div {
+        padding: 30px;
+      }
+
+      .band > div + div {
+        border-left: 1px solid var(--line);
+      }
+
+      .band h3 {
+        font-size: 19px;
+        padding-bottom: 10px;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .band h3::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 38px;
+        height: 3px;
+        background: var(--brand);
+        border-radius: 3px;
+      }
+
+      .edu {
+        display: flex;
+        gap: 13px;
+        margin-bottom: 20px;
+      }
+
+      .edu .ic {
+        width: 40px;
+        height: 40px;
+        flex: none;
+        border-radius: 11px;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+      }
+
+      .edu .ic {
+        background: color-mix(in srgb, var(--brand) 12%, transparent);
+        color: var(--brand-ink);
+      }
+
+      .edu b {
+        display: block;
+        font-size: 14.5px;
+      }
+
+      .edu span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .icoBtn.wa:hover {
+        background: rgba(37, 211, 102, 0.16);
+        border-color: rgba(37, 211, 102, 0.55);
+        color: #25d366;
+      }
+
+      #waFab {
+        position: fixed;
+        right: 22px;
+        bottom: 76px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        background: #25d366;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 26px rgba(37, 211, 102, 0.42);
+        z-index: 70;
+        transition:
+          transform 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
+      #waFab:hover {
+        transform: scale(1.08);
+        box-shadow: 0 14px 32px rgba(37, 211, 102, 0.55);
+      }
+
+      #waFab::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid #25d366;
+        animation: waPing 2.6s ease-out infinite;
+      }
+
+      @keyframes waPing {
+        0% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+
+        70%,
+        100% {
+          opacity: 0;
+          transform: scale(1.7);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #waFab::after {
+          animation: none;
+        }
+      }
+
+      /* ---------- bullets ---------- */
+      .ticks {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 7px;
+      }
+
+      .ticks li {
+        position: relative;
+        padding-left: 26px;
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+
+      .ticks li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.25em;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--brand-2) 18%, transparent)
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b6cc4' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 13 4 4 10-10'/%3E%3C/svg%3E")
+          center/10px no-repeat;
+      }
+
+      .ticks li strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .ticks li.hl {
+        color: var(--text);
+        padding: 7px 10px 7px 34px;
+        border-radius: 10px;
+        background: color-mix(in srgb, var(--violet) 11%, transparent);
+        border: 1px solid color-mix(in srgb, var(--violet) 30%, transparent);
+      }
+
+      .ticks li.hl::before {
+        left: 10px;
+        top: 0.55em;
+        background-color: color-mix(in srgb, var(--violet) 30%, transparent);
+      }
+
+      .aiTag {
+        display: inline-block;
+        font:
+          800 10px/1 "Plus Jakarta Sans",
+          Inter,
+          sans-serif;
+        letter-spacing: 0.08em;
+        padding: 3px 6px;
+        margin-right: 6px;
+        border-radius: 6px;
+        background: linear-gradient(135deg, #c8993a, #c8993a);
+        color: #2a1500;
+        vertical-align: 1px;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+
+      .chip {
+        font-size: 12.5px;
+        font-weight: 600;
+        padding: 5px 11px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        color: var(--text);
+      }
+
+      .chip.ai {
+        border-color: color-mix(in srgb, var(--violet) 45%, transparent);
+        background: color-mix(in srgb, var(--violet) 12%, transparent);
+      }
+
+      .aiStrip {
+        margin-top: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 10px;
+        font-size: 13px;
+        color: #a9b9d3;
+      }
+
+      .aiStrip b {
+        color: #1c1000;
+        background: linear-gradient(135deg, #e0b457, #c8993a);
+        border-radius: 999px;
+        padding: 5px 12px;
+        font-size: 12px;
+      }
+
+      .aiStrip span + span::before {
+        content: "·";
+        margin-right: 10px;
+        color: #9db8ee;
+      }
+
+      /* ---------- design · develop · deploy ---------- */
+      .capGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .cap {
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+
+      .cap:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--brand-2);
+      }
+
+      .cap::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--c1), var(--c2));
+      }
+
+      .cap .ic {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: linear-gradient(140deg, var(--c1), var(--c2));
+        box-shadow: 0 10px 22px color-mix(in srgb, var(--c1) 35%, transparent);
+      }
+
+      .cap h3 {
+        font-size: 20px;
+      }
+
+      .cap h3 small {
+        display: block;
+        font:
+          600 12.5px Inter,
+          sans-serif;
+        letter-spacing: 0;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      /* ---------- AI workflow ---------- */
+      .aiSec {
+        background:
+          radial-gradient(800px 420px at 85% 0%, rgba(200, 153, 58, 0.16), transparent 60%),
+          radial-gradient(700px 480px at 5% 100%, rgba(59, 108, 196, 0.22), transparent 60%),
+          linear-gradient(150deg, var(--hero-1), var(--hero-2) 60%, var(--hero-3));
+        color: var(--ink-hero);
+      }
+
+      .aiSec .head p {
+        color: #a9b9d3;
+        max-width: 72ch;
+      }
+
+      .aiSec .head h2::after {
+        background: linear-gradient(90deg, #e0b457, #c8993a);
+      }
+
+      .aiGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .aiCard {
+        padding: 22px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.045);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        transition:
+          transform 0.25s,
+          border-color 0.25s,
+          background 0.25s;
+      }
+
+      .aiCard:hover {
+        transform: translateY(-4px);
+        border-color: rgba(224, 180, 87, 0.55);
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      .aiCard header {
+        all: unset;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .aiCard .num {
+        font:
+          800 13px/1 "Plus Jakarta Sans",
+          Inter,
+          sans-serif;
+        color: #1c1000;
+        background: linear-gradient(135deg, #e0b457, #c8993a);
+        border-radius: 10px;
+        padding: 8px 9px;
+      }
+
+      .aiCard h3 {
+        font-size: 17px;
+      }
+
+      .aiCard .ticks li {
+        color: #b8c6de;
+      }
+
+      .aiCard .ticks li strong {
+        color: #fff;
+      }
+
+      .aiNote {
+        margin-top: 24px;
+        padding: 18px 22px;
+        border-radius: var(--radius);
+        border: 1px dashed rgba(224, 180, 87, 0.5);
+        background: rgba(224, 180, 87, 0.07);
+        font-size: 14.5px;
+        color: #e8eefa;
+      }
+
+      .aiNote b {
+        color: #e0b457;
+      }
+
+      /* ---------- skills ---------- */
+      .skillGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-bottom: 22px;
+      }
+
+      .sk {
+        padding: 22px;
+      }
+
+      .sk h3 {
+        font-size: 16px;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+
+      .sk h3 i {
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      }
+
+      .aboutText .ticks {
+        margin: 0 0 18px;
+      }
+
+      /* ---------- contact ---------- */
+      .contactGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .cInfo {
+        padding: 26px;
+      }
+
+      .cInfo h3 {
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+
+      .cInfo > p {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 0 0 18px;
+      }
+
+      .contactRow {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      .locationRow {
+        grid-template-columns: 1fr;
+      }
+
+      .cRow {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        min-height: 66px;
+        padding: 13px 14px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--surface-2);
+        transition:
+          border-color 0.2s,
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .cRow:hover {
+        border-color: var(--brand-2);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .cRow .ic {
+        width: 38px;
+        height: 38px;
+        flex: none;
+        border-radius: 11px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: linear-gradient(140deg, var(--brand), var(--brand-2));
+      }
+
+      .cRow.wa .ic {
+        background: linear-gradient(140deg, #25d366, #128c7e);
+      }
+
+      .cRow small {
+        display: block;
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+
+      .cRow b {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        word-break: break-word;
+      }
+
+      @media (max-width: 700px) {
+        .contactRow {
+          grid-template-columns: 1fr;
+        }
+
+        .cInfo {
+          padding: 20px;
+        }
+      }
+
+      /* footer */
+      footer {
+        background: linear-gradient(160deg, #070f1f, #0b1a33);
+        color: #c6d3e8;
+        padding: 52px 0 0;
+        margin-top: 20px;
+      }
+
+      .fGrid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr 1fr;
+        gap: 40px;
+        padding-bottom: 34px;
+      }
+
+      .fGrid h4 {
+        color: #fff;
+        font-size: 15px;
+        margin-bottom: 16px;
+      }
+
+      .fGrid p {
+        color: #92a6c6;
+        font-size: 14px;
+        max-width: 42ch;
+      }
+
+      .fLinks {
+        display: grid;
+        gap: 9px;
+        font-size: 14px;
+        color: #92a6c6;
+      }
+
+      .fLinks a:hover {
+        color: #fff;
+      }
+
+      .fContact {
+        display: grid;
+        gap: 12px;
+        font-size: 14px;
+        color: #92a6c6;
+      }
+
+      .fContact div {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+
+      .fContact .ic {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        background: rgba(255, 255, 255, 0.07);
+        display: grid;
+        place-items: center;
+        flex: none;
+        color: #9db8ee;
+      }
+
+      .fSocial {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .fBottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+        padding: 18px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: #8094b4;
+      }
+
+      #top {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        background: var(--brand);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 26px rgba(30, 58, 138, 0.4);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.25s;
+        z-index: 70;
+      }
+
+      #top.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @media (max-width: 980px) {
+        .menu {
+          display: none;
+        }
+
+        .menu.open {
+          display: grid;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          background: var(--surface);
+          border-bottom: 1px solid var(--line);
+          padding: 16px 20px;
+          gap: 14px;
+        }
+
+        .burger {
+          display: block;
+        }
+
+        .capGrid,
+        .aiGrid,
+        .skillGrid,
+        .heroGrid,
+        .aboutGrid,
+        .timeline,
+        .band,
+        .fGrid,
+        .contactGrid {
+          grid-template-columns: 1fr;
+        }
+
+        .sk {
+          grid-column: auto !important;
+        }
+
+        .heroArt {
+          min-height: 360px;
+          order: -1;
+        }
+
+        .band > div + div {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+        }
+
+        .navHideSm {
+          display: none;
+        }
+
+        .proj {
+          flex-basis: 300px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .statsRow {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .statsRow div:nth-child(2) {
+          border-right: 0;
+        }
+
+        .statsRow div:nth-child(1),
+        .statsRow div:nth-child(2) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .arw {
+          display: none;
+        }
+
+        .proj {
+          flex-basis: 84%;
+        }
+
+        .hero {
+          padding-top: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="#home">
+          <img src="./vikas-resume/tm-logo.svg" alt="" />
+          <span><b>VIKAS ARORA</b><small>Frontend Developer</small></span>
+        </a>
+        <nav class="menu" id="menu">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#ai">AI Workflow</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn primary navHideSm" href="./vikas-resume/resume-vikasarora.pdf" download="" target="_blank">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16"></path>
+          </svg>
+          Download Resume</a
+        >
+        <button class="toggle" id="themeBtn" aria-label="Switch colour theme">
+          <span class="knob"></span>
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <path
+              d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"></path>
+          </svg>
+        </button>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="wrap heroGrid">
+          <div>
+            <span class="pill">Frontend Developer + AI</span>
+            <h1>Building Scalable<br />Web <em>Solutions</em></h1>
+            <p class="lead">
+              Frontend Developer who takes interfaces from <strong>Figma design</strong> to
+              <strong>live deployment</strong>. 11+ years across UI design and React / Next JS development, plus CI/CD
+              on AWS &mdash; with AI woven into every phase of delivery.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn primary" href="./vikas-resume/resume-vikasarora.pdf" download="" target="_blank">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16"></path>
+                </svg>
+                Download Resume</a
+              >
+              <a class="btn ghost-dark" href="#projects"
+                >View Projects
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+              <a
+                class="icoBtn"
+                href="https://in.linkedin.com/in/vikas-arora-5b83a019"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.7c0-1.36-.03-3.11-1.9-3.11-1.9 0-2.2 1.48-2.2 3.01V21h-4V9Z"
+                  ></path></svg
+              ></a>
+              <a
+                class="icoBtn"
+                href="https://github.com/vikasdeveloper786"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.12 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                  ></path></svg
+              ></a>
+              <a
+                class="icoBtn wa"
+                href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+                  ></path></svg
+              ></a>
+              <a class="icoBtn" href="mailto:vikasdeveloper786@gmail.com" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="m3 7 9 6 9-6"></path></svg
+              ></a>
+            </div>
+
+            <div class="statsRow">
+              <div><b class="s1">11+</b><span>Years Experience</span></div>
+              <div><b class="s2">5</b><span>Years in Design</span></div>
+              <div><b class="s3">5+</b><span>Years in Development</span></div>
+              <div><b class="s4">50+</b><span>Projects Delivered</span></div>
+            </div>
+
+            <div class="aiStrip" aria-label="AI-assisted phases">
+              <b>&#10022; AI-assisted</b>
+              <span>Planning</span><span>Coding</span><span>Test cases</span><span>Debugging</span
+              ><span>Code review</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="heroArt">
+              <span class="glow"></span>
+
+              <div class="orbit">
+                <div class="orbitRing">
+                  <span class="orbitSlot" style="--a: 0deg">
+                    <span
+                      class="chipIco"
+                      data-tip="HTML5 — semantic, accessible markup"
+                      role="img"
+                      aria-label="HTML"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <path d="M2 2l1.8 20L12 24l8.2-2L22 2z" fill="#e44d26" />
+                        <path d="M12 3.6v18.9l6.6-1.8L20.2 3.6z" fill="#f16529" />
+                        <path
+                          d="M7 7.5h10l-.3 3H10l.2 2.5h6.2l-.5 5.2-3.9 1.1-3.9-1.1-.3-3h2.6l.1 1.5 1.5.4 1.5-.4.2-2H7.4z"
+                          fill="#fff"
+                        /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 40deg">
+                    <span
+                      class="chipIco"
+                      data-tip="Tailwind CSS — utility-first, fast UI styling"
+                      role="img"
+                      aria-label="Tailwind CSS"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24" fill="#38bdf8">
+                        <path
+                          d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"
+                        /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 80deg">
+                    <span
+                      class="chipIco"
+                      data-tip="React — component-driven interfaces"
+                      role="img"
+                      aria-label="React"
+                      tabindex="0"
+                    >
+                      <svg viewBox="-12 -12 24 24" fill="none" stroke="#61dafb" stroke-width="1.1">
+                        <circle r="2" fill="#61dafb" stroke="none" />
+                        <ellipse rx="10.5" ry="4.2" />
+                        <ellipse rx="10.5" ry="4.2" transform="rotate(60)" />
+                        <ellipse rx="10.5" ry="4.2" transform="rotate(120)" /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 120deg">
+                    <span
+                      class="chipIco"
+                      data-tip="JavaScript — the language of the web"
+                      role="img"
+                      aria-label="JavaScript"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <rect width="24" height="24" rx="2" fill="#f7df1e" />
+                        <text
+                          x="23"
+                          y="21"
+                          text-anchor="end"
+                          font-family="Inter,sans-serif"
+                          font-size="12"
+                          font-weight="800"
+                          fill="#111"
+                        >
+                          JS
+                        </text>
+                      </svg></span
+                    >
+                  </span>
+                  <span class="orbitSlot" style="--a: 160deg">
+                    <span
+                      class="chipIco"
+                      data-tip="TypeScript — typed JavaScript that scales"
+                      role="img"
+                      aria-label="TypeScript"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <rect width="24" height="24" rx="2" fill="#3178c6" />
+                        <text
+                          x="23"
+                          y="21"
+                          text-anchor="end"
+                          font-family="Inter,sans-serif"
+                          font-size="12"
+                          font-weight="800"
+                          fill="#fff"
+                        >
+                          TS
+                        </text>
+                      </svg></span
+                    >
+                  </span>
+                  <span class="orbitSlot" style="--a: 200deg">
+                    <span
+                      class="chipIco"
+                      data-tip="Figma — design to code, pixel for pixel"
+                      role="img"
+                      aria-label="Figma"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 16 24">
+                        <path d="M4 24a4 4 0 0 0 4-4v-4H4a4 4 0 0 0 0 8z" fill="#0acf83" />
+                        <path d="M0 12a4 4 0 0 1 4-4h4v8H4a4 4 0 0 1-4-4z" fill="#a259ff" />
+                        <path d="M0 4a4 4 0 0 1 4-4h4v8H4a4 4 0 0 1-4-4z" fill="#f24e1e" />
+                        <path d="M8 0h4a4 4 0 0 1 0 8H8z" fill="#ff7262" />
+                        <circle cx="12" cy="12" r="4" fill="#1abcfe" /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 240deg">
+                    <span
+                      class="chipIco"
+                      data-tip="GitHub — version control and collaboration"
+                      role="img"
+                      aria-label="GitHub"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24" fill="#e6edf3">
+                        <path
+                          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                        /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 280deg">
+                    <span
+                      class="chipIco"
+                      data-tip="Mailchimp — email campaigns and automation"
+                      role="img"
+                      aria-label="Mailchimp"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="11" fill="#ffe01b" />
+                        <ellipse cx="12" cy="13" rx="7" ry="6" fill="#241c15" />
+                        <circle cx="9.3" cy="11.5" r="1.4" fill="#ffe01b" />
+                        <circle cx="14.7" cy="11.5" r="1.4" fill="#ffe01b" />
+                        <path
+                          d="M9 15.2q3 2 6 0"
+                          stroke="#ffe01b"
+                          stroke-width="1.2"
+                          fill="none"
+                          stroke-linecap="round"
+                        />
+                        <path d="M12 7V3.5" stroke="#241c15" stroke-width="1.4" stroke-linecap="round" /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 320deg">
+                    <span
+                      class="chipIco"
+                      data-tip="Campaign Monitor — email marketing that looks the part"
+                      role="img"
+                      aria-label="Campaign Monitor"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="14" rx="2.5" fill="#509ee3" />
+                        <path
+                          d="M3 7l9 7 9-7"
+                          stroke="#fff"
+                          stroke-width="1.8"
+                          fill="none"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        /></svg
+                    ></span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="codeBg" aria-hidden="true">
+                <div class="bar">
+                  <i style="background: #ff5f57"></i><i style="background: #febc2e"></i
+                  ><i style="background: #28c840"></i><span>developer.ts</span>
+                </div>
+                <pre><span class="tk">const</span> <span class="tv">developer</span> = {
+  <span class="tf">name</span>: <span class="ts">"Vikas Arora"</span>,
+  <span class="tf">design</span>: [<span class="ts">"Figma"</span>, <span class="ts">"Photoshop"</span>],
+  <span class="tf">develop</span>: [<span class="ts">"React"</span>, <span class="ts">"Next.js"</span>, <span class="ts">"TS"</span>],
+  <span class="tf">styling</span>: [<span class="ts">"Tailwind"</span>, <span class="ts">"Shadcn"</span>],
+  <span class="tf">deploy</span>: [<span class="ts">"Actions"</span>, <span class="ts">"AWS"</span>, <span class="ts">"Nginx"</span>],
+  <span class="tf">ai</span>: <span class="ts">"every phase"</span>,
+};
+
+<span class="tk">export default</span> <span class="tv">developer</span>;</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="wrap">
+          <div class="aboutGrid">
+            <div class="photoFrame"><img src="./vikas-resume/vikas_profile.jpg" alt="Vikas Arora" /></div>
+
+            <div class="aboutText">
+              <div class="head">
+                <h2>About me</h2>
+              </div>
+              <ul class="ticks">
+                <li>
+                  Frontend Developer with <strong>11+ years</strong> in the web industry &mdash; started as a designer
+                  and specialised in building modern, polished interfaces.
+                </li>
+                <li>
+                  I own the whole path:
+                  <strong>design in Figma &rarr; build in React / Next JS &rarr; ship via GitHub Actions to AWS</strong
+                  >.
+                </li>
+                <li>
+                  Design background means <strong>pixel-accurate, user-first interfaces</strong>; working knowledge of
+                  APIs and databases means smooth integration with any backend.
+                </li>                
+              </ul>
+              <p style="margin: 0">
+                <a href="#ai" style="color: var(--brand-ink); font-weight: 600">See my AI workflow&nbsp;&rarr;</a>
+                &nbsp;&middot;&nbsp;
+                <a href="#contact" style="color: var(--brand-ink); font-weight: 600">Get in touch</a>
+              </p>
+              <div class="sign">Vikas Arora</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESIGN / DEVELOP / DEPLOY -->
+      <section id="capabilities" style="padding-top: 10px">
+        <div class="wrap">
+          <div class="head">
+            <h2>Design &middot; Develop &middot; Deploy</h2>
+            <p>One developer across the entire product lifecycle &mdash; fewer handoffs, faster delivery.</p>
+          </div>
+          <div class="capGrid">
+            <article class="card cap" style="--c1: #c8993a; --c2: #c8993a">
+              <span class="ic"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m12 19 7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"></path>
+                  <circle cx="11" cy="11" r="2"></circle></svg
+              ></span>
+              <h3>Design<small>5 years &middot; UI &amp; graphic design</small></h3>
+              <div class="chips">
+                <span class="chip">Figma</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span>
+              </div>
+              <ul class="ticks">
+                <li>Wireframes to high-fidelity UI mockups and reusable component styles in <strong>Figma</strong></li>
+                <li>
+                  Image editing, branding and web-optimised assets in <strong>Photoshop &amp; Illustrator</strong>
+                </li>
+                <li>Design-to-code handoff &mdash; I build what I design, pixel for pixel</li>
+              </ul>
+            </article>
+
+            <article class="card cap" style="--c1: #1e3a8a; --c2: #7ea3e8">
+              <span class="ic"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"></path></svg
+              ></span>
+              <h3>Development<small>Frontend &middot; React &middot; Next JS &middot; TypeScript</small></h3>
+              <div class="chips">
+                <span class="chip">React</span><span class="chip">Next JS</span><span class="chip">TypeScript</span
+                ><span class="chip">Tailwind</span><span class="chip">HTML / CSS</span>
+              </div>
+              <ul class="ticks">
+                <li>
+                  Responsive, cross-browser frontends in <strong>React &amp; Next JS</strong> with TypeScript, Tailwind
+                  CSS and Shadcn UI
+                </li>
+                <li>
+                  Reusable component libraries, <strong>responsive layouts</strong> and cross-browser compatibility
+                </li>
+                <li>
+                  <strong>REST &amp; GraphQL</strong> API integration, with working knowledge of Node.js and databases
+                </li>                
+              </ul>
+            </article>
+
+            <article class="card cap" style="--c1: #1e3a8a; --c2: #6b94dd">
+              <span class="ic"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9-.8-.8-2.1-.8-2.9-.1zM12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2zM9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"
+                  ></path></svg
+              ></span>
+              <h3>Deployment<small>Frontend DevOps &middot; CI/CD</small></h3>
+              <div class="chips">
+                <span class="chip">Git</span><span class="chip">GitHub Actions</span><span class="chip">AWS</span
+                ><span class="chip">Nginx</span>
+              </div>
+              <ul class="ticks">
+                <li>Branching, pull requests and code review with <strong>Git &amp; GitHub</strong></li>
+                <li>Automated build, test and deploy pipelines with <strong>GitHub Actions</strong></li>
+                <li>Hosting on <strong>AWS</strong> with <strong>Nginx</strong> as web server / reverse proxy</li>                
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <div class="wrap">
+          <div class="head">
+            <h2>Professional experience</h2>
+          </div>
+          <div class="timeline">
+            <svg class="climb" viewBox="0 0 100 120" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="climbGrad" x1="0" y1="1" x2="1" y2="0">
+                  <stop stop-color="#1e3a8a"></stop>
+                  <stop offset=".5" stop-color="#c8993a"></stop>
+                  <stop offset="1" stop-color="#3b6cc4"></stop>
+                </linearGradient>
+              </defs>
+              <path
+                d="M2.4 84 L36.4 56 L70.5 28"
+                fill="none"
+                stroke="url(#climbGrad)"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-dasharray="7 7"
+                vector-effect="non-scaling-stroke"
+                opacity=".5"
+              ></path>
+            </svg>
+
+            <article class="tl">
+              <span class="bubble" style="background: linear-gradient(140deg, #1e3a8a, #6b94dd)">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="m12 19 7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"></path>
+                </svg>
+              </span>
+              <h3>Designer</h3>
+              <div class="co">Vtnetzwelt, Mohali</div>
+              <div class="when">2015 – 2020</div>
+              <ul class="ticks">
+                <li>
+                  Designed UI and graphics for web projects in <strong>Photoshop, Illustrator &amp; Figma</strong>
+                </li>
+                <li>Turned client requirements into usable, visually consistent layouts</li>
+                <li>Prepared design handoffs and optimised assets for the development team</li>
+              </ul>
+            </article>
+
+            <article class="tl">
+              <span class="bubble" style="background: linear-gradient(140deg, #a87a2a, #e0b457)">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"></path>
+                </svg>
+              </span>
+              <h3>UI Developer</h3>
+              <div class="co">Vtnetzwelt, Mohali</div>
+              <div class="when">2020 – 2024</div>
+              <ul class="ticks">
+                <li>Built responsive, interactive interfaces with <strong>HTML, CSS &amp; JavaScript</strong></li>
+                <li>Converted Figma / PSD designs into clean, cross-browser-compatible pages</li>
+                <li>Focused on usability and page performance</li>
+              </ul>
+            </article>
+
+            <article class="tl green">
+              <span class="bubble" style="background: linear-gradient(140deg, #1e3a8a, #3b6cc4)">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 21V6l7-3v18M11 21h9V10h-9"></path>
+                </svg>
+              </span>
+              <h3>Frontend Developer</h3>
+              <div class="co">Vtnetzwelt, Mohali</div>
+              <div class="when">Oct 2024 – Present · 2+ years</div>
+              <ul class="ticks">
+                <li>
+                  Build and maintain web apps with a frontend focus &mdash; <strong>React, Next JS, TypeScript</strong>
+                </li>
+                <li>Integrate REST APIs and collaborate on <strong>MongoDB &amp; PostgreSQL</strong> backends</li>
+                <li>Own delivery: <strong>Git, GitHub Actions CI/CD, AWS &amp; Nginx</strong> deployments</li>                
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI WORKFLOW -->
+      <section id="ai" class="aiSec">
+        <div class="wrap">
+          <div class="head">
+            <h2>AI-powered engineering workflow</h2>
+            <p>
+              AI is part of how I work every day &mdash; across the whole delivery cycle, not just autocomplete. I write
+              precise prompts, review every suggestion critically, and verify the result with tests.
+            </p>
+          </div>
+          <div class="aiGrid">
+            <article class="aiCard">
+              <header>
+                <span class="num">01</span>
+                <h3>Plan &amp; Design</h3>
+              </header>
+              <ul class="ticks">
+                <li>Break requirements into <strong>tasks, architecture options and edge cases</strong></li>
+                <li>Turn Figma specs into component structure for faster scaffolding</li>
+              </ul>
+            </article>
+            <article class="aiCard">
+              <header>
+                <span class="num">02</span>
+                <h3>Development</h3>
+              </header>
+              <ul class="ticks">
+                <li>Pair-program with AI on <strong>components, hooks, APIs and boilerplate</strong></li>
+                <li>Refactor and migrate (e.g. JS &rarr; TypeScript), then review every diff</li>
+              </ul>
+            </article>
+            <article class="aiCard">
+              <header>
+                <span class="num">03</span>
+                <h3>Test Cases</h3>
+              </header>
+              <ul class="ticks">
+                <li>Generate <strong>unit, integration and edge-case tests</strong> from requirements and code</li>
+                <li>Refine assertions by hand so tests check behaviour, not just coverage</li>
+              </ul>
+            </article>
+            <article class="aiCard">
+              <header>
+                <span class="num">04</span>
+                <h3>Debugging</h3>
+              </header>
+              <ul class="ticks">
+                <li>Analyse errors and stack traces to <strong>isolate root causes</strong> quickly</li>
+                <li>Compare fix options and add a regression test before patching</li>
+              </ul>
+            </article>
+            <article class="aiCard">
+              <header>
+                <span class="num">05</span>
+                <h3>Code Review &amp; Quality</h3>
+              </header>
+              <ul class="ticks">
+                <li>AI-assisted review for <strong>bugs, security, accessibility and performance</strong></li>
+                <li>Keep code clean, consistent and well documented</li>
+              </ul>
+            </article>
+            <article class="aiCard">
+              <header>
+                <span class="num">06</span>
+                <h3>DevOps &amp; Docs</h3>
+              </header>
+              <ul class="ticks">
+                <li>
+                  Draft <strong>GitHub Actions workflows, Nginx configs and deploy scripts</strong>, validated before
+                  release
+                </li>
+                <li>Generate READMEs, PR descriptions and changelogs</li>
+              </ul>
+            </article>
+          </div>          
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="wrap">
+          <div class="head">
+            <h2>Featured projects</h2>
+            <p>
+              Selected projects showcasing my experience in UI design and frontend development. The covers are original
+              portfolio artwork created to represent each project.
+            </p>
+          </div>
+
+          <div class="railWrap">
+            <button class="arw l" id="prev" aria-label="Previous projects" disabled="">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              >
+                <path d="m14 6-6 6 6 6"></path>
+              </svg>
+            </button>
+            <button class="arw r" id="next" aria-label="Next projects">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              >
+                <path d="m10 6 6 6-6 6"></path>
+              </svg>
+            </button>
+
+            <div class="rail" id="rail">
+              <article class="proj">
+                <div class="pmedia">
+                  <div
+                    class="cover"
+                    style="--c1: #38bdf8; --c2: #818cf8"
+                    role="img"
+                    aria-label="ARTMO portfolio artwork"
+                  >
+                    <span class="cnum">01</span>
+                    <span class="ctext"><b>ARTMO</b><em>E-commerce</em><span>React.js</span></span>
+                    <span class="cui"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="plogo">AR</span>
+                </div>
+                <div class="pb">
+                  <h3>ARTMO</h3>
+                  <span class="badge">React.js</span>
+                  <p>ARTMO is best categorized as an Art Social Network + Online Art Marketplace.</p>
+                  <a href="https://www.artmo.com/" target="_blank" rel="noopener">View project →</a>
+                </div>
+              </article>
+
+              <article class="proj">
+                <div class="pmedia">
+                  <div
+                    class="cover"
+                    style="--c1: #6b94dd; --c2: #3b82f6"
+                    role="img"
+                    aria-label="YouGov portfolio artwork"
+                  >
+                    <span class="cnum">02</span>
+                    <span class="ctext"
+                      ><b>YOUGOV</b><em>Market Research</em
+                      ><span>YouGov Shopper — Market Research & Consumer Insights Platform</span></span
+                    >
+                    <span class="cui"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="plogo">YG</span>
+                </div>
+                <div class="pb">
+                  <h3>YOUGOV</h3>
+                  <span class="badge">Svelte</span>
+                  <p>YouGov Shopper — Market Research & Consumer Insights Platform.</p>
+                  <a href="https://shopper.yougov.com/auth/en-gb/login" target="_blank" rel="noopener"
+                    >View project →</a
+                  >
+                </div>
+              </article>
+
+              <article class="proj">
+                <div class="pmedia">
+                  <div
+                    class="cover"
+                    style="--c1: #34d399; --c2: #6b94dd"
+                    role="img"
+                    aria-label="Sparkfive portfolio artwork"
+                  >
+                    <span class="cnum">03</span>
+                    <span class="ctext"
+                      ><b>Sparkfive</b><em>Market Research</em><span>Digital Asset Management Platform</span></span
+                    >
+                    <span class="cui"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="plogo">SF</span>
+                </div>
+                <div class="pb">
+                  <h3>SPARKFIVE</h3>
+                  <span class="badge">React.js</span>
+                  <p>Sparkfive - Digital Asset Management.</p>
+                  <a href="https://www.sparkfive.com/" target="_blank" rel="noopener">View project →</a>
+                </div>
+              </article>
+
+              <article class="proj">
+                <div class="pmedia">
+                  <div
+                    class="cover"
+                    style="--c1: #f472b6; --c2: #818cf8"
+                    role="img"
+                    aria-label="MindPeer portfolio artwork"
+                  >
+                    <span class="cnum">04</span>
+                    <span class="ctext"
+                      ><b>MINDPEER</b><em>Market Research</em><span>Mental Health Platform</span></span
+                    >
+                    <span class="cui"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="plogo">MP</span>
+                </div>
+                <div class="pb">
+                  <h3>MD</h3>
+                  <span class="badge v">Angular</span>
+                  <p>Angular JS - Focus on mental health platform.</p>
+                  <a href="https://mindpeer.ai/" target="_blank" rel="noopener">View project →</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS / EDUCATION -->
+      <section id="skills" style="padding-top: 10px">
+        <div class="wrap">
+          <div class="head">
+            <h2>Technical skills</h2>
+          </div>
+          <div class="skillGrid">
+            <div class="card sk">
+              <h3><i></i>Design</h3>
+              <div class="chips">
+                <span class="chip">Figma</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span
+                ><span class="chip">UI / UX</span><span class="chip">Responsive design</span>
+              </div>
+            </div>
+            <div class="card sk">
+              <h3><i></i>Frontend</h3>
+              <div class="chips">
+                <span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">JavaScript</span
+                ><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Next JS</span
+                ><span class="chip">Tailwind CSS</span><span class="chip">Shadcn UI</span
+                ><span class="chip">Angular (working knowledge)</span>
+              </div>
+            </div>
+            <div class="card sk">
+              <h3><i></i>APIs &amp; Backend (working knowledge)</h3>
+              <div class="chips">
+                <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST</span
+                ><span class="chip">GraphQL</span><span class="chip">MongoDB</span><span class="chip">MySQL</span
+                ><span class="chip">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="card sk">
+              <h3><i></i>Deployment &amp; DevOps</h3>
+              <div class="chips">
+                <span class="chip">Git</span><span class="chip">GitHub</span
+                ><span class="chip">GitHub Actions (CI/CD)</span><span class="chip">AWS</span
+                ><span class="chip">Nginx</span>
+              </div>
+            </div>
+            <div class="card sk" style="grid-column: span 2">
+              <h3><i></i>AI-assisted development</h3>
+              <div class="chips">
+                <span class="chip ai">AI pair programming</span><span class="chip ai">Prompt engineering</span
+                ><span class="chip ai">AI test-case generation</span><span class="chip ai">AI debugging</span
+                ><span class="chip ai">AI code review</span><span class="chip ai">AI-drafted CI/CD &amp; docs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="band">
+            <div id="education">
+              <h3>Education</h3>
+              <div class="edu">
+                <span class="ic">🎓</span>
+                <div>
+                  <b>BCA</b>
+                  <span>Punjab Technical University, Chandigarh</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3>Languages</h3>
+              <div class="edu">
+                <span class="ic">🗣</span>
+                <div>
+                  <b>English · Hindi · Punjabi</b>
+                  <span>Professional and native fluency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="head">
+            <h2>Get in touch</h2>
+            <p>
+              Have a frontend project in mind, or an opportunity you’d like to discuss? Reach out on any channel below
+              &mdash; I’ll get back to you within a day.
+            </p>
+          </div>
+
+          <div class="contactGrid">
+            <div class="card cInfo">
+              <h3>Contact details</h3>
+
+              <p>Prefer something direct? Reach me on any of these.</p>
+
+              <!-- ROW 1 -->
+              <div class="contactRow">
+                <!-- WhatsApp -->
+                <a
+                  class="cRow wa"
+                  href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="ic">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>WhatsApp</small>
+                    <b>Chat on +91 97809 99700</b>
+                  </span>
+                </a>
+
+                <!-- Email -->
+                <a class="cRow" href="mailto:vikasdeveloper786@gmail.com">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+
+                      <path d="m3 7 9 6 9-6"></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>Email</small>
+                    <b>vikasdeveloper786@gmail.com</b>
+                  </span>
+                </a>
+              </div>
+
+              <!-- ROW 2 -->
+              <div class="contactRow">
+                <!-- Phone -->
+                <a class="cRow" href="tel:+919780999700">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>Phone</small>
+                    <b>+91 97809 99700</b>
+                  </span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a class="cRow" href="https://in.linkedin.com/in/vikas-arora-5b83a019" target="_blank" rel="noopener">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.7c0-1.36-.03-3.11-1.9-3.11-1.9 0-2.2 1.48-2.2 3.01V21h-4V9Z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>LinkedIn</small>
+                    <b>vikas-arora</b>
+                  </span>
+                </a>
+              </div>
+
+              <!-- ROW 3 -->
+              <div class="contactRow locationRow">
+                <!-- Location -->
+                <div class="cRow" style="cursor: default">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"></path>
+
+                      <circle cx="12" cy="10" r="2.6"></circle>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>Location</small>
+                    <b>Zirakpur, Mohali Punjab</b>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="fGrid">
+          <div>
+            <a class="brand" href="#home" style="color: #fff">
+              <img src="./vikas-resume/tm-logo.svg" alt="" />
+              <span><b>VIKAS ARORA</b><small style="color: #8fa5c2">Frontend Developer</small></span>
+            </a>
+            <p style="margin-top: 16px">
+              Building scalable, pixel-perfect web interfaces and AI-powered solutions for the future of digital
+              business.
+            </p>
+            <div class="fSocial">
+              <a
+                class="icoBtn"
+                href="https://in.linkedin.com/in/vikas-arora-5b83a019"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.7c0-1.36-.03-3.11-1.9-3.11-1.9 0-2.2 1.48-2.2 3.01V21h-4V9Z"
+                  ></path></svg
+              ></a>
+              <a
+                class="icoBtn"
+                href="https://github.com/vikasdeveloper786"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.12 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                  ></path></svg
+              ></a>
+              <a
+                class="icoBtn wa"
+                href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+                  ></path></svg
+              ></a>
+              <a class="icoBtn" href="mailto:vikasdeveloper786@gmail.com" aria-label="Email">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="m3 7 9 6 9-6"></path></svg
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4>Quick links</h4>
+            <nav class="fLinks">
+              <a href="#home">Home</a><a href="#about">About</a><a href="#experience">Experience</a>
+              <a href="#ai">AI Workflow</a><a href="#projects">Projects</a><a href="#skills">Skills</a
+              ><a href="#education">Education</a>
+              <a href="./vikas-resume/resume-vikasarora.pdf" download="" target="_blank">Resume</a>
+            </nav>
+          </div>
+
+          <div>
+            <h4>Let's connect</h4>
+            <div class="fContact">
+              <div>
+                <span class="ic"
+                  ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="m3 7 9 6 9-6"></path></svg
+                ></span>
+                <a href="mailto:vikasdeveloper786@gmail.com">vikasdeveloper786@gmail.com</a>
+              </div>
+              <div>
+                <span class="ic"
+                  ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"
+                    ></path></svg
+                ></span>
+                <a href="tel:+919780999700">+91 97809 99700</a>
+              </div>
+              <div>
+                <span class="ic" style="color: #25d366"
+                  ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+                    ></path></svg
+                ></span>
+                <a
+                  href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noopener"
+                  >Chat on WhatsApp</a
+                >
+              </div>
+              <div>
+                <span class="ic"
+                  ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"></path>
+                    <circle cx="12" cy="10" r="2.6"></circle></svg
+                ></span>
+                Zirakpur, Mohali Punjab
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fBottom">
+          <span>© <span id="yr">2026</span> Vikas Arora. All rights reserved.</span>
+          <span>Frontend Developer</span>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      id="waFab"
+      href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      title="Chat on WhatsApp"
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+        ></path>
+      </svg>
+    </a>
+
+    <button id="top" aria-label="Back to top">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.4"
+        stroke-linecap="round"
+      >
+        <path d="M12 19V6m0 0-6 6m6-6 6 6"></path>
+      </svg>
+    </button>
+
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      /* theme */
+      const root = document.documentElement;
+      document.getElementById("themeBtn").addEventListener("click", () => {
+        root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      });
+
+      /* mobile menu */
+      const burger = document.getElementById("burger"),
+        menu = document.getElementById("menu");
+      burger.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        burger.setAttribute("aria-expanded", open);
+      });
+      menu.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") menu.classList.remove("open");
+      });
+
+      /* projects carousel */
+      const rail = document.getElementById("rail");
+      const prev = document.getElementById("prev"),
+        next = document.getElementById("next");
+
+      function syncArrows() {
+        const max = rail.scrollWidth - rail.clientWidth - 2;
+        const off = max <= 0;
+        prev.disabled = off || rail.scrollLeft <= 2;
+        next.disabled = off || rail.scrollLeft >= max;
+      }
+      function step() {
+        const card = rail.querySelector(".proj:not([hidden])");
+        return card ? card.getBoundingClientRect().width + 20 : 300;
+      }
+      prev.addEventListener("click", () => rail.scrollBy({ left: -step() * 2, behavior: "smooth" }));
+      next.addEventListener("click", () => rail.scrollBy({ left: step() * 2, behavior: "smooth" }));
+      rail.addEventListener("scroll", syncArrows, { passive: true });
+      addEventListener("resize", syncArrows);
+
+      syncArrows();
+
+      /* active nav link + back to top */
+      const sections = [...document.querySelectorAll("section[id]")];
+      const links = [...document.querySelectorAll(".menu a")];
+      const topBtn = document.getElementById("top");
+      topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      addEventListener(
+        "scroll",
+        () => {
+          topBtn.classList.toggle("show", scrollY > 500);
+          const y = scrollY + 140;
+          let id = sections[0].id;
+          for (const s of sections) if (s.offsetTop <= y) id = s.id;
+          links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
+</html>
