@@ -1,0 +1,3918 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Vikas Arora | Senior Frontend Developer</title>
+    <meta
+      name="description"
+      content="Vikas Arora - Senior Frontend Developer: frontend architecture, Core Web Vitals performance, testing and accessibility in React / Next.js, plus AI product engineering (LLM, RAG, agents, MCP)."
+    />
+    <link rel="icon" href="./vikas-resume/tm-logo.svg" />
+    <meta property="og:title" content="Vikas Arora | Senior Frontend Developer" />
+    <meta
+      property="og:description"
+      content="11+ years building for the web &mdash; frontend architecture, performance, quality engineering and AI product features in React / Next.js."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link href="./vikas-resume/css2" rel="stylesheet" />
+    <style>
+      :root {
+        --brand: #1e3a8a;
+        --brand-2: #3b6cc4;
+        --brand-ink: #1e3a8a;
+        --violet: #c8993a;
+        --cyan: #6b94dd;
+        --radius: 16px;
+        --ink-hero: #eef3fc;
+        --hero-1: #070f1f;
+        --hero-2: #0b1a33;
+        --hero-3: #0e2244;
+        --page: #f5f7fb;
+        --surface: #ffffff;
+        --surface-2: #f8fafc;
+        --text: #0f1b2d;
+        --muted: #566178;
+        --line: #e2e8f0;
+        --shadow: 0 10px 30px rgba(15, 27, 45, 0.07);
+        --shadow-lg: 0 22px 60px rgba(15, 27, 45, 0.12);
+      }
+
+      html[data-theme="dark"] {
+        --brand-ink: #9db8ee;
+        --page: #070e1c;
+        --surface: #0c1729;
+        --surface-2: #101e36;
+        --text: #e8eef9;
+        --muted: #94a5c0;
+        --line: #1d2d4a;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+        --shadow-lg: 0 22px 60px rgba(0, 0, 0, 0.55);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--text);
+        font:
+          15px/1.7 Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Plus Jakarta Sans", Inter, sans-serif;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .wrap {
+        width: min(1180px, 100% - 40px);
+        margin-inline: auto;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--brand-2);
+        outline-offset: 3px;
+        border-radius: 8px;
+      }
+
+      /* ---------- header ---------- */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: color-mix(in srgb, var(--surface) 88%, transparent);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        height: 72px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-right: auto;
+      }
+
+      .brand img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand b {
+        display: block;
+        font-family: "Plus Jakarta Sans";
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+      }
+
+      .brand small {
+        display: block;
+        font-size: 10.5px;
+        letter-spacing: 0.16em;
+        color: var(--muted);
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      .menu {
+        display: flex;
+        gap: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      .menu a {
+        position: relative;
+        padding: 6px 0;
+      }
+
+      .menu a:hover {
+        color: var(--text);
+      }
+
+      .menu a.active {
+        color: var(--brand-ink);
+        font-weight: 600;
+      }
+
+      .menu a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 2px;
+        background: var(--brand);
+        border-radius: 2px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 10px;
+        padding: 11px 18px;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--text);
+        cursor: pointer;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn.primary {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+        box-shadow: 0 8px 22px rgba(30, 58, 138, 0.28);
+      }
+
+      .btn.ghost-dark {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(255, 255, 255, 0.18);
+        color: #fff;
+      }
+
+      .toggle {
+        width: 66px;
+        height: 34px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+        color: var(--muted);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+      }
+
+      .toggle .knob {
+        position: absolute;
+        top: 50%;
+        left: 3px;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        translate: 0 -50%;
+        background: var(--brand);
+        box-shadow: 0 2px 8px rgba(30, 58, 138, 0.38);
+        transition: transform 0.28s cubic-bezier(0.4, 1.4, 0.5, 1);
+      }
+
+      html[data-theme="dark"] .toggle .knob {
+        transform: translateX(32px);
+      }
+
+      .toggle svg {
+        width: 15px;
+        height: 15px;
+        display: block;
+        position: relative;
+        z-index: 1;
+        transition:
+          color 0.22s ease,
+          opacity 0.22s ease;
+      }
+
+      .toggle .ico-sun {
+        color: #fff;
+      }
+
+      .toggle .ico-moon {
+        color: var(--muted);
+        opacity: 0.72;
+      }
+
+      html[data-theme="dark"] .toggle .ico-sun {
+        color: var(--muted);
+        opacity: 0.72;
+      }
+
+      html[data-theme="dark"] .toggle .ico-moon {
+        color: #fff;
+        opacity: 1;
+      }
+
+      .toggle:hover .ico-sun,
+      .toggle:hover .ico-moon {
+        opacity: 1;
+      }
+
+      .toggle:focus-visible {
+        outline: 2px solid var(--brand);
+        outline-offset: 3px;
+      }
+
+      .burger {
+        display: none;
+        background: none;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 9px 11px;
+        color: var(--text);
+        cursor: pointer;
+      }
+
+      /* ---------- hero ---------- */
+      .hero {
+        background:
+          radial-gradient(900px 520px at 78% 34%, rgba(59, 108, 196, 0.3), transparent 62%),
+          radial-gradient(700px 480px at 12% 0%, rgba(200, 153, 58, 0.2), transparent 60%),
+          linear-gradient(150deg, var(--hero-1), var(--hero-2) 55%, var(--hero-3));
+        color: var(--ink-hero);
+        padding: 56px 0 36px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0 0;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .heroGrid {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 48px;
+        align-items: center;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid rgba(157, 184, 238, 0.45);
+        background: rgba(30, 58, 138, 0.16);
+        color: #9db8ee;
+        border-radius: 999px;
+        padding: 7px 15px;
+        font-size: 12.5px;
+        font-weight: 600;
+      }
+
+      .hero h1 {
+        font-size: clamp(38px, 5.2vw, 58px);
+        line-height: 1.08;
+        margin: 22px 0 18px;
+        font-weight: 800;
+      }
+
+      .hero h1 em {
+        font-style: normal;
+        background: linear-gradient(92deg, #9db8ee, #dce8fb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero p.lead {
+        color: #a9b9d3;
+        font-size: 16px;
+        max-width: 56ch;
+        margin: 0;
+      }
+
+      .heroActions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin: 30px 0 34px;
+      }
+
+      .icoBtn {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        color: #dce8fb;
+        transition: 0.2s;
+      }
+
+      .icoBtn:hover {
+        background: var(--brand);
+        border-color: var(--brand);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+
+      .statsRow {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.045);
+        overflow: hidden;
+      }
+
+      .statsRow div {
+        padding: 16px 14px;
+        text-align: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .statsRow div:last-child {
+        border-right: 0;
+      }
+
+      .statsRow b {
+        display: block;
+        font-family: "Plus Jakarta Sans";
+        font-size: 26px;
+        font-weight: 800;
+        line-height: 1.2;
+      }
+
+      .statsRow span {
+        font-size: 12.5px;
+        color: #92a6c6;
+      }
+
+      .s1 {
+        color: #7ea3e8;
+      }
+
+      .s2 {
+        color: #e0b457;
+      }
+
+      .s3 {
+        color: #6b94dd;
+      }
+
+      .heroArt {
+        position: relative;
+        display: grid;
+        place-items: center;
+        min-height: 430px;
+        container-type: inline-size;
+      }
+
+      .glow {
+        position: absolute;
+        width: min(440px, 86%);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        background: radial-gradient(circle, rgba(30, 58, 138, 0.55), rgba(30, 58, 138, 0.06) 62%, transparent 70%);
+      }
+
+      /* ---------- rotating icon orbit ---------- */
+      .orbit {
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        pointer-events: none;
+        --size: min(392px, 88cqw);
+        --r: calc(var(--size) / 2);
+        width: var(--size);
+        height: var(--size);
+      }
+
+      .orbit .chipIco {
+        pointer-events: auto;
+      }
+
+      .orbitRing {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 1px solid rgba(190, 208, 245, 0.26);
+        box-shadow:
+          0 0 0 1px rgba(190, 208, 245, 0.05) inset,
+          0 0 60px rgba(30, 58, 138, 0.12) inset;
+        animation: orbitSpin 34s linear infinite;
+      }
+
+      .orbitRing::before {
+        content: "";
+        position: absolute;
+        inset: -6px;
+        border-radius: 50%;
+        border: 1px dashed rgba(190, 208, 245, 0.14);
+      }
+
+      .orbitSlot {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 48px;
+        height: 48px;
+        transform: translate(-50%, -50%) rotate(var(--a)) translateY(calc(var(--r) * -1)) rotate(calc(var(--a) * -1));
+      }
+
+      .orbitSlot .chipIco {
+        animation: orbitSpin 34s linear infinite reverse;
+      }
+
+      .orbit:has(.chipIco:hover) .orbitRing,
+      .orbit:has(.chipIco:hover) .chipIco,
+      .orbit:focus-within .orbitRing,
+      .orbit:focus-within .chipIco {
+        animation-play-state: paused;
+      }
+
+      @keyframes orbitSpin {
+        from {
+          rotate: 0deg;
+        }
+
+        to {
+          rotate: 360deg;
+        }
+      }
+
+      .chipIco {
+        position: relative;
+        z-index: 3;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: rgba(7, 15, 31, 0.82);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+      }
+
+      .chipIco svg {
+        width: 24px;
+        height: 24px;
+        transition: scale 0.25s ease;
+      }
+
+      .chipIco {
+        cursor: help;
+        transition:
+          scale 0.25s cubic-bezier(0.2, 0.9, 0.3, 1.3),
+          border-color 0.25s,
+          box-shadow 0.25s;
+      }
+
+      .chipIco:hover,
+      .chipIco:focus-visible {
+        scale: 1.22;
+        z-index: 8;
+        border-color: rgba(190, 208, 245, 0.55);
+        box-shadow:
+          0 16px 38px rgba(0, 0, 0, 0.55),
+          0 0 0 6px rgba(59, 108, 196, 0.13);
+      }
+
+      .chipIco:hover svg {
+        scale: 1.08;
+      }
+
+      .chipIco::after {
+        content: attr(data-tip);
+        position: absolute;
+        top: calc(100% + 14px);
+        left: 50%;
+        width: max-content;
+        max-width: 190px;
+        padding: 9px 12px;
+        border-radius: 11px;
+        background: rgba(5, 12, 26, 0.97);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        color: #d3def0;
+        font:
+          500 12px/1.45 Inter,
+          sans-serif;
+        letter-spacing: 0.01em;
+        text-align: center;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+        opacity: 0;
+        pointer-events: none;
+        translate: -50% 8px;
+        transition:
+          opacity 0.22s ease,
+          translate 0.22s ease;
+        z-index: 9;
+      }
+
+      .chipIco:hover::after,
+      .chipIco:focus-visible::after {
+        opacity: 1;
+        translate: -50% 0;
+      }
+
+      .codeBg {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: min(322px, 72cqw);
+        height: min(282px, 64cqw);
+        border-radius: 20px;
+        overflow: hidden;
+        background: rgba(5, 12, 26, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+        font:
+          500 clamp(8.5px, 2.05cqw, 11.5px)/1.95 ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace;
+        -webkit-mask-image: radial-gradient(125% 92% at 50% 44%, #000 34%, transparent 80%);
+        mask-image: radial-gradient(125% 92% at 50% 44%, #000 34%, transparent 80%);
+      }
+
+      .codeBg .bar {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .codeBg .bar i {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+      }
+
+      .codeBg .bar span {
+        margin-left: 7px;
+        font:
+          600 11px Inter,
+          sans-serif;
+        color: #6f84a6;
+        letter-spacing: 0.02em;
+      }
+
+      .codeBg pre {
+        margin: 0;
+        padding: 16px 20px;
+        color: #7f93b3;
+        white-space: pre;
+        overflow: hidden;
+        opacity: 0.85;
+      }
+
+      .tk {
+        color: #c74a94;
+      }
+
+      .tf {
+        color: #4a86c9;
+      }
+
+      .ts {
+        color: #3f9e78;
+      }
+
+      .tv {
+        color: #c99a3c;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .orbitRing,
+        .orbitSlot .chipIco {
+          animation: none;
+        }
+      }
+
+      /* ---------- sections ---------- */
+      section {
+        padding: 36px 0;
+        /* clears the 72px sticky header when jumping to an anchor */
+        scroll-margin-top: 72px;
+      }
+
+      #education {
+        scroll-margin-top: 72px;
+      }
+
+      .head {
+        margin-bottom: 28px;
+      }
+
+      .head h2 {
+        font-size: clamp(24px, 3vw, 31px);
+        font-weight: 800;
+        position: relative;
+        padding-bottom: 12px;
+      }
+
+      .head h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 52px;
+        height: 3px;
+        border-radius: 3px;
+        background: var(--brand);
+      }
+
+      .head p {
+        color: var(--muted);
+        margin: 14px 0 0;
+        max-width: 62ch;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .aboutGrid {
+        display: grid;
+        grid-template-columns: 260px 1fr;
+        gap: 36px;
+        align-items: start;
+      }
+
+      .photoFrame {
+        position: relative;
+        border-radius: 18px;
+        padding: 0px;
+        background: linear-gradient(150deg, var(--brand), var(--brand-2));
+        box-shadow: var(--shadow-lg);
+      }
+
+      .photoFrame img {
+        display: block;
+        border-radius: 12px;
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: 50% 22%;
+      }
+
+      .aboutText p {
+        color: var(--muted);
+        margin: 0 0 14px;
+      }
+
+      .sign {
+        font-family: Caveat, cursive;
+        font-size: 30px;
+        color: var(--text);
+        opacity: 0.85;
+        margin-top: 6px;
+      }
+
+      /* experience timeline */
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+        position: relative;
+      }
+
+      .timeline .climb {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 120px;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .timeline article.tl {
+        position: relative;
+        z-index: 1;
+        transition: translate 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+      }
+
+      .timeline article.tl:nth-of-type(1) {
+        margin-top: 56px;
+      }
+
+      .timeline article.tl:nth-of-type(2) {
+        margin-top: 28px;
+      }
+
+      .timeline article.tl:hover {
+        translate: 0 -6px;
+      }
+
+      .timeline article.tl:hover .bubble {
+        scale: 1.08;
+      }
+
+      .tl .bubble {
+        transition: scale 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.3);
+      }
+
+      @media (max-width: 980px) {
+        .timeline .climb {
+          display: none;
+        }
+
+        .timeline article.tl:nth-of-type(1),
+        .timeline article.tl:nth-of-type(2) {
+          margin-top: 0;
+        }
+      }
+
+      .tl {
+        position: relative;
+        padding-left: 0;
+      }
+
+      .tl .bubble {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        margin-bottom: 16px;
+        box-shadow: 0 10px 24px rgba(30, 58, 138, 0.28);
+        position: relative;
+        z-index: 1;
+      }
+
+      .tl h3 {
+        font-size: 17px;
+      }
+
+      .tl .co {
+        font-weight: 700;
+        color: var(--brand-ink);
+        margin: 3px 0 8px;
+      }
+
+      .tl .when {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 4px 11px;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--brand) 10%, transparent);
+        color: var(--brand-ink);
+        margin-bottom: 10px;
+      }
+
+      .tl.green .when {
+        background: rgba(30, 58, 138, 0.12);
+        color: #1e3a8a;
+      }
+
+      /* projects */
+      .railWrap {
+        position: relative;
+      }
+
+      .rail {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding: 6px 2px 18px;
+        scrollbar-width: thin;
+      }
+
+      .rail::-webkit-scrollbar {
+        height: 6px;
+      }
+
+      .rail::-webkit-scrollbar-thumb {
+        background: var(--line);
+        border-radius: 99px;
+      }
+
+      .proj {
+        flex: 0 0 380px;
+        min-width: 0;
+        scroll-snap-align: start;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        display: flex;
+        flex-direction: column;
+        transition: 0.25s;
+      }
+
+      .proj:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--brand-2);
+      }
+
+      .pmedia {
+        position: relative;
+        container-type: inline-size;
+      }
+
+      .cover {
+        aspect-ratio: 16/10;
+        position: relative;
+        overflow: hidden;
+        color: #eef8ff;
+        padding: 5cqw 5cqw 21cqw;
+        display: flex;
+        gap: 3cqw;
+        background:
+          radial-gradient(38cqw 38cqw at 92% 8%, color-mix(in srgb, var(--c1) 26%, transparent), transparent 70%),
+          radial-gradient(42cqw 42cqw at 4% 98%, color-mix(in srgb, var(--c2) 24%, transparent), transparent 70%),
+          linear-gradient(145deg, #070f1f, #0c2347 55%, #14203f);
+      }
+
+      .cover .cnum {
+        position: absolute;
+        top: 5cqw;
+        right: 5cqw;
+        font:
+          700 3.6cqw/1 Inter,
+          sans-serif;
+        color: #9cc0ff;
+        background: #12305c;
+        border: 1px solid #2c5a96;
+        border-radius: 99px;
+        padding: 1.6cqw 3.4cqw;
+      }
+
+      .cover .ctext {
+        flex: 1;
+        min-width: 0;
+        align-self: center;
+      }
+
+      .cover .ctext b {
+        display: block;
+        font-family: "Plus Jakarta Sans", Inter, sans-serif;
+        font-weight: 800;
+        font-size: 7cqw;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+
+      .cover .ctext em {
+        display: block;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3.5cqw;
+        letter-spacing: 0.12em;
+        color: var(--c1);
+        margin: 2.4cqw 0 1.4cqw;
+      }
+
+      .cover .ctext span {
+        display: block;
+        font-size: 3.4cqw;
+        line-height: 1.45;
+        color: #a7b8d4;
+      }
+
+      .cover .cui {
+        width: 30cqw;
+        flex: none;
+        align-self: center;
+        border-radius: 4cqw;
+        padding: 3cqw;
+        background: #0a1630;
+        border: 1px solid #24406f;
+        display: grid;
+        gap: 2cqw;
+      }
+
+      .cover .cui i {
+        display: block;
+        border-radius: 99px;
+        background: #3a5f9a80;
+        height: 2.4cqw;
+      }
+
+      .cover .cui i:first-child {
+        height: 9cqw;
+        border-radius: 3cqw;
+        background: linear-gradient(135deg, var(--c1), var(--c2));
+        opacity: 0.8;
+      }
+
+      .cover .cui i:nth-child(3) {
+        width: 70%;
+      }
+
+      .plogo {
+        position: absolute;
+        left: 14px;
+        bottom: 14px;
+        height: 42px;
+        min-width: 42px;
+        padding: 0 10px;
+        border-radius: 11px;
+        background: #fff;
+        border: 1px solid rgba(15, 27, 45, 0.1);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+        display: grid;
+        place-items: center;
+        font:
+          800 14px/1 "Plus Jakarta Sans",
+          Inter,
+          sans-serif;
+        color: #0f1b2d;
+        letter-spacing: 0.04em;
+      }
+
+      .pb {
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        flex: 1;
+      }
+
+      .pb h3 {
+        font-size: 17px;
+      }
+
+      .badge {
+        align-self: flex-start;
+        font-size: 11.5px;
+        font-weight: 700;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--brand) 10%, transparent);
+        color: var(--brand-ink);
+      }
+
+      .badge.v {
+        background: rgba(200, 153, 58, 0.12);
+        color: #c8993a;
+      }
+
+      .pb p {
+        color: var(--muted);
+        font-size: 13.8px;
+        margin: 0;
+        flex: 1;
+      }
+
+      .pb a {
+        color: var(--brand-ink);
+        font-weight: 600;
+        font-size: 13.8px;
+      }
+
+      .arw {
+        position: absolute;
+        top: 38%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        color: var(--text);
+        cursor: pointer;
+        z-index: 5;
+      }
+
+      .arw.l {
+        left: -18px;
+      }
+
+      .arw.r {
+        right: -18px;
+      }
+
+      .arw:disabled {
+        opacity: 0.35;
+        cursor: default;
+      }
+
+      /* dashboard band */
+      .band {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .band > div {
+        padding: 30px;
+      }
+
+      .band > div + div {
+        border-left: 1px solid var(--line);
+      }
+
+      .band h3 {
+        font-size: 19px;
+        padding-bottom: 10px;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+      .band h3::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 38px;
+        height: 3px;
+        background: var(--brand);
+        border-radius: 3px;
+      }
+
+      .edu {
+        display: flex;
+        gap: 13px;
+        margin-bottom: 20px;
+      }
+
+      .edu .ic {
+        width: 40px;
+        height: 40px;
+        flex: none;
+        border-radius: 11px;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+      }
+
+      .edu .ic {
+        background: color-mix(in srgb, var(--brand) 12%, transparent);
+        color: var(--brand-ink);
+      }
+
+      .edu b {
+        display: block;
+        font-size: 14.5px;
+      }
+
+      .edu span {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .icoBtn.wa:hover {
+        background: rgba(37, 211, 102, 0.16);
+        border-color: rgba(37, 211, 102, 0.55);
+        color: #25d366;
+      }
+
+      #waFab {
+        position: fixed;
+        right: 22px;
+        bottom: 76px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        background: #25d366;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 26px rgba(37, 211, 102, 0.42);
+        z-index: 70;
+        transition:
+          transform 0.22s ease,
+          box-shadow 0.22s ease;
+      }
+
+      #waFab:hover {
+        transform: scale(1.08);
+        box-shadow: 0 14px 32px rgba(37, 211, 102, 0.55);
+      }
+
+      #waFab::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid #25d366;
+        animation: waPing 2.6s ease-out infinite;
+      }
+
+      @keyframes waPing {
+        0% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+
+        70%,
+        100% {
+          opacity: 0;
+          transform: scale(1.7);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        #waFab::after {
+          animation: none;
+        }
+      }
+
+      /* ---------- bullets ---------- */
+      .ticks {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 7px;
+      }
+
+      .ticks li {
+        position: relative;
+        padding-left: 26px;
+        font-size: 14px;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+
+      .ticks li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.25em;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: color-mix(in srgb, var(--brand-2) 18%, transparent)
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b6cc4' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 13 4 4 10-10'/%3E%3C/svg%3E")
+          center/10px no-repeat;
+      }
+
+      .ticks li strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .ticks li.hl {
+        color: var(--text);
+        padding: 7px 10px 7px 34px;
+        border-radius: 10px;
+        background: color-mix(in srgb, var(--violet) 11%, transparent);
+        border: 1px solid color-mix(in srgb, var(--violet) 30%, transparent);
+      }
+
+      .ticks li.hl::before {
+        left: 10px;
+        top: 0.55em;
+        background-color: color-mix(in srgb, var(--violet) 30%, transparent);
+      }
+
+      .aiTag {
+        display: inline-block;
+        font:
+          800 10px/1 "Plus Jakarta Sans",
+          Inter,
+          sans-serif;
+        letter-spacing: 0.08em;
+        padding: 3px 6px;
+        margin-right: 6px;
+        border-radius: 6px;
+        background: linear-gradient(135deg, #c8993a, #c8993a);
+        color: #2a1500;
+        vertical-align: 1px;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+
+      .chip {
+        font-size: 12.5px;
+        font-weight: 600;
+        padding: 5px 11px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        color: var(--text);
+      }
+
+      .chip.ai {
+        border-color: color-mix(in srgb, var(--violet) 45%, transparent);
+        background: color-mix(in srgb, var(--violet) 12%, transparent);
+      }
+
+      .aiStrip {
+        margin-top: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 10px;
+        font-size: 13px;
+        color: #a9b9d3;
+      }
+
+      .aiStrip b {
+        color: #1c1000;
+        background: linear-gradient(135deg, #e0b457, #c8993a);
+        border-radius: 999px;
+        padding: 5px 12px;
+        font-size: 12px;
+      }
+
+      .aiStrip span + span::before {
+        content: "·";
+        margin-right: 10px;
+        color: #9db8ee;
+      }
+
+      /* ---------- design · develop · deploy ---------- */
+      .capGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+
+      .cap {
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+
+      .cap:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--brand-2);
+      }
+
+      .cap::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--c1), var(--c2));
+      }
+
+      .cap .ic {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: linear-gradient(140deg, var(--c1), var(--c2));
+        box-shadow: 0 10px 22px color-mix(in srgb, var(--c1) 35%, transparent);
+      }
+
+      .cap h3 {
+        font-size: 20px;
+      }
+
+      .cap h3 small {
+        display: block;
+        font:
+          600 12.5px Inter,
+          sans-serif;
+        letter-spacing: 0;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      /* ---------- AI workflow ---------- */
+      .aiSec {
+        background:
+          radial-gradient(800px 420px at 85% 0%, rgba(200, 153, 58, 0.16), transparent 60%),
+          radial-gradient(700px 480px at 5% 100%, rgba(59, 108, 196, 0.22), transparent 60%),
+          linear-gradient(150deg, var(--hero-1), var(--hero-2) 60%, var(--hero-3));
+        color: var(--ink-hero);
+      }
+
+      .aiSec .head p {
+        color: #a9b9d3;
+        max-width: 72ch;
+      }
+
+      .aiSec .head h2::after {
+        background: linear-gradient(90deg, #e0b457, #c8993a);
+      }
+
+      .aiGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .aiGrid.two {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .aiSec .aiStrip {
+        margin-top: 22px;
+      }
+
+      .aiCard {
+        padding: 22px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.045);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        transition:
+          transform 0.25s,
+          border-color 0.25s,
+          background 0.25s;
+      }
+
+      .aiCard:hover {
+        transform: translateY(-4px);
+        border-color: rgba(224, 180, 87, 0.55);
+        background: rgba(255, 255, 255, 0.07);
+      }
+
+      .aiCard header {
+        all: unset;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .aiCard .num {
+        font:
+          800 13px/1 "Plus Jakarta Sans",
+          Inter,
+          sans-serif;
+        color: #1c1000;
+        background: linear-gradient(135deg, #e0b457, #c8993a);
+        border-radius: 10px;
+        padding: 8px 9px;
+      }
+
+      .aiCard h3 {
+        font-size: 17px;
+      }
+
+      .aiCard .ticks li {
+        color: #b8c6de;
+      }
+
+      .aiCard .ticks li strong {
+        color: #fff;
+      }
+
+      .aiNote {
+        margin-top: 24px;
+        padding: 18px 22px;
+        border-radius: var(--radius);
+        border: 1px dashed rgba(224, 180, 87, 0.5);
+        background: rgba(224, 180, 87, 0.07);
+        font-size: 14.5px;
+        color: #e8eefa;
+      }
+
+      .aiNote b {
+        color: #e0b457;
+      }
+
+      /* ---------- skills ---------- */
+      .skillGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-bottom: 22px;
+      }
+
+      .sk {
+        padding: 22px;
+      }
+
+      .sk h3 {
+        font-size: 16px;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+
+      .sk h3 i {
+        width: 10px;
+        height: 10px;
+        border-radius: 3px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      }
+
+      .aboutText .ticks {
+        margin: 0 0 18px;
+      }
+
+      /* ---------- contact ---------- */
+      .contactGrid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .cInfo {
+        padding: 26px;
+      }
+
+      .cInfo h3 {
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+
+      .cInfo > p {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 0 0 18px;
+      }
+
+      .contactRow {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      .locationRow {
+        grid-template-columns: 1fr;
+      }
+
+      .cRow {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        min-height: 66px;
+        padding: 13px 14px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--surface-2);
+        transition:
+          border-color 0.2s,
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .cRow:hover {
+        border-color: var(--brand-2);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+      }
+
+      .cRow .ic {
+        width: 38px;
+        height: 38px;
+        flex: none;
+        border-radius: 11px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: linear-gradient(140deg, var(--brand), var(--brand-2));
+      }
+
+      .cRow.wa .ic {
+        background: linear-gradient(140deg, #25d366, #128c7e);
+      }
+
+      .cRow small {
+        display: block;
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+
+      .cRow b {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        word-break: break-word;
+      }
+
+      @media (max-width: 700px) {
+        .contactRow {
+          grid-template-columns: 1fr;
+        }
+
+        .cInfo {
+          padding: 20px;
+        }
+      }
+
+      /* ---------- pillar cards (architecture / performance / quality) ---------- */
+      .pillarGrid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .pillarGrid.three {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .pillar {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+
+      .pillar:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--brand-2);
+      }
+
+      .pillar h3 {
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+
+      .pillar header {
+        all: unset;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+
+      .pillar header h3 {
+        font-size: 17px;
+      }
+
+      .pillar > p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+
+      .pn {
+        flex: none;
+        font:
+          800 11px/1 "Plus Jakarta Sans",
+          Inter,
+          sans-serif;
+        letter-spacing: 0.08em;
+        color: #fff;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        border-radius: 9px;
+        padding: 8px 9px;
+      }
+
+      .pillar code,
+      .cs code {
+        font:
+          600 12.5px ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Consolas,
+          monospace;
+        padding: 1px 5px;
+        border-radius: 5px;
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+        color: var(--brand-ink);
+      }
+
+      /* ---------- metrics ---------- */
+      .metricGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-bottom: 22px;
+      }
+
+      .metric {
+        padding: 20px;
+      }
+
+      .metric b {
+        display: block;
+        font-family: "Plus Jakarta Sans", Inter, sans-serif;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.15;
+        color: var(--brand-ink);
+      }
+
+      .metric.gold b {
+        color: #c8993a;
+      }
+
+      .metric > span {
+        display: block;
+        font-size: 13.5px;
+        font-weight: 600;
+        margin-top: 4px;
+      }
+
+      .metric small {
+        display: block;
+        font-size: 12.5px;
+        line-height: 1.5;
+        color: var(--muted);
+        margin-top: 8px;
+      }
+
+      /* ---------- achievements ---------- */
+      .achGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .ach {
+        padding: 22px;
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+        transition:
+          transform 0.25s,
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+
+      .ach:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-lg);
+        border-color: var(--brand-2);
+      }
+
+      .ach .ic {
+        width: 42px;
+        height: 42px;
+        flex: none;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        background: linear-gradient(140deg, var(--brand), var(--brand-2));
+        box-shadow: 0 8px 18px rgba(30, 58, 138, 0.26);
+      }
+
+      .ach.gold .ic {
+        background: linear-gradient(140deg, #a87a2a, #e0b457);
+        box-shadow: 0 8px 18px rgba(200, 153, 58, 0.3);
+      }
+
+      .ach b {
+        display: block;
+        font-family: "Plus Jakarta Sans", Inter, sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+
+      .ach > div > span {
+        display: block;
+        font-size: 13.5px;
+        line-height: 1.6;
+        color: var(--muted);
+        margin-top: 5px;
+      }
+
+      /* ---------- case studies ---------- */
+      .csGrid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .cs {
+        padding: 26px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 28px;
+        transition:
+          box-shadow 0.25s,
+          border-color 0.25s;
+      }
+
+      .cs:hover {
+        box-shadow: var(--shadow-lg);
+        border-color: var(--brand-2);
+      }
+
+      .csHead {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        flex-wrap: wrap;
+        padding-bottom: 18px;
+        margin-bottom: 4px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .csNum {
+        flex: none;
+        font:
+          800 11px/1 "Plus Jakarta Sans",
+          Inter,
+          sans-serif;
+        letter-spacing: 0.12em;
+        color: #fff;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        border-radius: 999px;
+        padding: 8px 13px;
+      }
+
+      .cs h3 {
+        font-size: 19px;
+        margin-right: auto;
+      }
+
+      .csBlock b {
+        display: block;
+        font:
+          700 11.5px/1 Inter,
+          sans-serif;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+        color: var(--brand-ink);
+        margin-bottom: 12px;
+      }
+
+      .csResult {
+        grid-column: 1 / -1;
+        margin-top: 18px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+      }
+
+      .kv {
+        font-size: 12.5px;
+        font-weight: 700;
+        padding: 7px 13px;
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--violet) 12%, transparent);
+        border: 1px solid color-mix(in srgb, var(--violet) 32%, transparent);
+        color: var(--text);
+      }
+
+      /* chips inside the dark AI band */
+      .aiSec .chip {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.17);
+        color: #dbe5f5;
+      }
+
+      .aiSec .aiNote a {
+        text-decoration: underline;
+      }
+
+      .s4 {
+        color: #9db8ee;
+      }
+
+      /* ---------- responsive: new sections ---------- */
+      @media (max-width: 1220px) {
+        .navHideSm {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1000px) {
+        .metricGrid,
+        .achGrid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .pillarGrid,
+        .pillarGrid.three,
+        .cs {
+          grid-template-columns: 1fr;
+        }
+
+        .csResult,
+        .csHead {
+          grid-column: auto;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .metricGrid,
+        .achGrid {
+          grid-template-columns: 1fr;
+        }
+
+        .cs,
+        .pillar,
+        .ach {
+          padding: 20px;
+        }
+      }
+
+      /* footer */
+      footer {
+        background: linear-gradient(160deg, #070f1f, #0b1a33);
+        color: #c6d3e8;
+        padding: 36px 0 0;
+        margin-top: 0;
+      }
+
+      .fGrid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr 1fr;
+        gap: 40px;
+        padding-bottom: 34px;
+      }
+
+      .fGrid h4 {
+        color: #fff;
+        font-size: 15px;
+        margin-bottom: 16px;
+      }
+
+      .fGrid p {
+        color: #92a6c6;
+        font-size: 14px;
+        max-width: 42ch;
+      }
+
+      .fLinks {
+        display: grid;
+        gap: 9px;
+        font-size: 14px;
+        color: #92a6c6;
+      }
+
+      .fLinks a:hover {
+        color: #fff;
+      }
+
+      .fContact {
+        display: grid;
+        gap: 12px;
+        font-size: 14px;
+        color: #92a6c6;
+      }
+
+      .fContact div {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+      }
+
+      .fContact .ic {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        background: rgba(255, 255, 255, 0.07);
+        display: grid;
+        place-items: center;
+        flex: none;
+        color: #9db8ee;
+      }
+
+      .fSocial {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .fBottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.09);
+        padding: 18px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: #8094b4;
+      }
+
+      #top {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 0;
+        cursor: pointer;
+        background: var(--brand);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        box-shadow: 0 10px 26px rgba(30, 58, 138, 0.4);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.25s;
+        z-index: 70;
+      }
+
+      #top.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @media (max-width: 980px) {
+        .menu {
+          display: none;
+        }
+
+        .menu.open {
+          display: grid;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          right: 0;
+          background: var(--surface);
+          border-bottom: 1px solid var(--line);
+          padding: 16px 20px;
+          gap: 14px;
+        }
+
+        .burger {
+          display: block;
+        }
+
+        .capGrid,
+        .aiGrid,
+        .aiGrid.two,
+        .skillGrid,
+        .heroGrid,
+        .aboutGrid,
+        .timeline,
+        .band,
+        .fGrid,
+        .contactGrid {
+          grid-template-columns: 1fr;
+        }
+
+        .sk {
+          grid-column: auto !important;
+        }
+
+        .pillarGrid,
+        .pillarGrid.three,
+        .metricGrid,
+        .achGrid,
+        .cs {
+          grid-template-columns: 1fr;
+        }
+
+        .heroArt {
+          min-height: 360px;
+          order: -1;
+        }
+
+        .band > div + div {
+          border-left: 0;
+          border-top: 1px solid var(--line);
+        }
+
+        .navHideSm {
+          display: none;
+        }
+
+        .proj {
+          flex-basis: 300px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .statsRow {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .statsRow div:nth-child(2) {
+          border-right: 0;
+        }
+
+        .statsRow div:nth-child(1),
+        .statsRow div:nth-child(2) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .arw {
+          display: none;
+        }
+
+        .proj {
+          flex-basis: 84%;
+        }
+
+        .hero {
+          padding-top: 40px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a class="brand" href="#home">
+          <img src="./vikas-resume/tm-logo.svg" alt="" />
+          <span><b>VIKAS ARORA</b><small>Senior Frontend Developer</small></span>
+        </a>
+        <nav class="menu" id="menu">
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>          
+          <a href="#experience">Experience</a>
+          <a href="#ai">AI</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn primary navHideSm" href="./vikas-resume/resume-vikasarora.pdf" download="" target="_blank">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16"></path>
+          </svg>
+          Download Resume</a
+        >
+        <button class="toggle" id="themeBtn" aria-label="Switch colour theme">
+          <span class="knob"></span>
+          <svg class="ico-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4.5"></circle>
+            <path
+              d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"></path>
+          </svg>
+        </button>
+        <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="wrap heroGrid">
+          <div>
+            <span class="pill">Engineering &middot; Architecture &middot; AI</span>
+            <h1>Engineering Scalable<br />Frontend <em>Architecture</em></h1>
+            <p class="lead">
+              Senior Frontend Developer, 11+ years. I <strong>architect and ship production React / Next.js
+              applications</strong> &mdash; module boundaries, state and data-layer design, Core Web Vitals
+              performance, testing and accessibility gates, CI/CD on AWS. I also build
+              <strong>AI product features</strong>: LLM integrations, RAG, agents and MCP tooling.
+            </p>
+
+            <div class="heroActions">
+              <a class="btn primary" href="./vikas-resume/resume-vikasarora.pdf" download="" target="_blank">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 20h16"></path>
+                </svg>
+                Download Resume</a
+              >
+              <a class="btn ghost-dark" href="#projects"
+                >View Projects
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+              <a
+                class="icoBtn"
+                href="https://in.linkedin.com/in/vikas-arora-5b83a019"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.7c0-1.36-.03-3.11-1.9-3.11-1.9 0-2.2 1.48-2.2 3.01V21h-4V9Z"
+                  ></path></svg
+              ></a>
+              <a
+                class="icoBtn"
+                href="https://github.com/vikasdeveloper786"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.12 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                  ></path></svg
+              ></a>
+              <a
+                class="icoBtn wa"
+                href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+                  ></path></svg
+              ></a>
+              <a class="icoBtn" href="mailto:vikasdeveloper786@gmail.com" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="m3 7 9 6 9-6"></path></svg
+              ></a>
+            </div>
+
+            <div class="statsRow">
+              <div><b class="s1">11+</b><span>Years in the industry</span></div>
+              <div><b class="s2">5+</b><span>Years React / Next.js</span></div>
+              <div><b class="s3">50+</b><span>Projects delivered</span></div>
+              <div><b class="s4">~50%</b><span>Faster LCP achieved</span></div>
+            </div>
+
+            <div class="aiStrip" aria-label="AI engineering focus areas">
+              <b>&#10022; AI Product Engineering</b>
+              <span>LLM</span><span>RAG</span><span>Agents</span><span>MCP</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="heroArt">
+              <span class="glow"></span>
+
+              <div class="orbit">
+                <div class="orbitRing">
+                  <span class="orbitSlot" style="--a: 0deg">
+                    <span
+                      class="chipIco"
+                      data-tip="HTML5 — semantic, accessible markup"
+                      role="img"
+                      aria-label="HTML"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <path d="M2 2l1.8 20L12 24l8.2-2L22 2z" fill="#e44d26" />
+                        <path d="M12 3.6v18.9l6.6-1.8L20.2 3.6z" fill="#f16529" />
+                        <path
+                          d="M7 7.5h10l-.3 3H10l.2 2.5h6.2l-.5 5.2-3.9 1.1-3.9-1.1-.3-3h2.6l.1 1.5 1.5.4 1.5-.4.2-2H7.4z"
+                          fill="#fff"
+                        /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 40deg">
+                    <span
+                      class="chipIco"
+                      data-tip="Tailwind CSS — utility-first, fast UI styling"
+                      role="img"
+                      aria-label="Tailwind CSS"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24" fill="#38bdf8">
+                        <path
+                          d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"
+                        /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 80deg">
+                    <span
+                      class="chipIco"
+                      data-tip="React — component-driven interfaces"
+                      role="img"
+                      aria-label="React"
+                      tabindex="0"
+                    >
+                      <svg viewBox="-12 -12 24 24" fill="none" stroke="#61dafb" stroke-width="1.1">
+                        <circle r="2" fill="#61dafb" stroke="none" />
+                        <ellipse rx="10.5" ry="4.2" />
+                        <ellipse rx="10.5" ry="4.2" transform="rotate(60)" />
+                        <ellipse rx="10.5" ry="4.2" transform="rotate(120)" /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 120deg">
+                    <span
+                      class="chipIco"
+                      data-tip="JavaScript — the language of the web"
+                      role="img"
+                      aria-label="JavaScript"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <rect width="24" height="24" rx="2" fill="#f7df1e" />
+                        <text
+                          x="23"
+                          y="21"
+                          text-anchor="end"
+                          font-family="Inter,sans-serif"
+                          font-size="12"
+                          font-weight="800"
+                          fill="#111"
+                        >
+                          JS
+                        </text>
+                      </svg></span
+                    >
+                  </span>
+                  <span class="orbitSlot" style="--a: 160deg">
+                    <span
+                      class="chipIco"
+                      data-tip="TypeScript — typed JavaScript that scales"
+                      role="img"
+                      aria-label="TypeScript"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <rect width="24" height="24" rx="2" fill="#3178c6" />
+                        <text
+                          x="23"
+                          y="21"
+                          text-anchor="end"
+                          font-family="Inter,sans-serif"
+                          font-size="12"
+                          font-weight="800"
+                          fill="#fff"
+                        >
+                          TS
+                        </text>
+                      </svg></span
+                    >
+                  </span>
+                  <span class="orbitSlot" style="--a: 200deg">
+                    <span
+                      class="chipIco"
+                      data-tip="Figma — design to code, pixel for pixel"
+                      role="img"
+                      aria-label="Figma"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 16 24">
+                        <path d="M4 24a4 4 0 0 0 4-4v-4H4a4 4 0 0 0 0 8z" fill="#0acf83" />
+                        <path d="M0 12a4 4 0 0 1 4-4h4v8H4a4 4 0 0 1-4-4z" fill="#a259ff" />
+                        <path d="M0 4a4 4 0 0 1 4-4h4v8H4a4 4 0 0 1-4-4z" fill="#f24e1e" />
+                        <path d="M8 0h4a4 4 0 0 1 0 8H8z" fill="#ff7262" />
+                        <circle cx="12" cy="12" r="4" fill="#1abcfe" /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 240deg">
+                    <span
+                      class="chipIco"
+                      data-tip="GitHub — version control and collaboration"
+                      role="img"
+                      aria-label="GitHub"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24" fill="#e6edf3">
+                        <path
+                          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                        /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 280deg">
+                    <span
+                      class="chipIco"
+                      data-tip="Mailchimp — email campaigns and automation"
+                      role="img"
+                      aria-label="Mailchimp"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="11" fill="#ffe01b" />
+                        <ellipse cx="12" cy="13" rx="7" ry="6" fill="#241c15" />
+                        <circle cx="9.3" cy="11.5" r="1.4" fill="#ffe01b" />
+                        <circle cx="14.7" cy="11.5" r="1.4" fill="#ffe01b" />
+                        <path
+                          d="M9 15.2q3 2 6 0"
+                          stroke="#ffe01b"
+                          stroke-width="1.2"
+                          fill="none"
+                          stroke-linecap="round"
+                        />
+                        <path d="M12 7V3.5" stroke="#241c15" stroke-width="1.4" stroke-linecap="round" /></svg
+                    ></span>
+                  </span>
+                  <span class="orbitSlot" style="--a: 320deg">
+                    <span
+                      class="chipIco"
+                      data-tip="Campaign Monitor — email marketing that looks the part"
+                      role="img"
+                      aria-label="Campaign Monitor"
+                      tabindex="0"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <rect x="2" y="5" width="20" height="14" rx="2.5" fill="#509ee3" />
+                        <path
+                          d="M3 7l9 7 9-7"
+                          stroke="#fff"
+                          stroke-width="1.8"
+                          fill="none"
+                          stroke-linejoin="round"
+                          stroke-linecap="round"
+                        /></svg
+                    ></span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="codeBg" aria-hidden="true">
+                <div class="bar">
+                  <i style="background: #ff5f57"></i><i style="background: #febc2e"></i
+                  ><i style="background: #28c840"></i><span>developer.ts</span>
+                </div>
+                <pre><span class="tk">const</span> <span class="tv">developer</span> = {
+  <span class="tf">name</span>: <span class="ts">"Vikas Arora"</span>,
+  <span class="tf">design</span>: [<span class="ts">"Figma"</span>, <span class="ts">"Photoshop"</span>],
+  <span class="tf">develop</span>: [<span class="ts">"React"</span>, <span class="ts">"Next.js"</span>, <span class="ts">"TS"</span>],
+  <span class="tf">styling</span>: [<span class="ts">"Tailwind"</span>, <span class="ts">"Shadcn"</span>],
+  <span class="tf">deploy</span>: [<span class="ts">"Actions"</span>, <span class="ts">"AWS"</span>, <span class="ts">"Nginx"</span>],
+  <span class="tf">ai</span>: <span class="ts">"every phase"</span>,
+};
+
+<span class="tk">export default</span> <span class="tv">developer</span>;</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="wrap">
+          <div class="aboutGrid">
+            <div class="photoFrame"><img src="./vikas-resume/vikas_profile.jpg" alt="Vikas Arora" /></div>
+
+            <div class="aboutText">
+              <div class="head">
+                <h2>About me</h2>
+              </div>
+              <ul class="ticks">
+                <li>
+                  Senior Frontend Developer with <strong>11+ years</strong> in the web industry &mdash; five of them in
+                  design, and five-plus building and architecting React / Next.js applications.
+                </li>
+                <li>
+                  My day job is <strong>frontend architecture</strong>: deciding how an app is structured, where state
+                  lives, how data flows through a typed API layer, and what the shared component system looks like.
+                </li>
+                <li>
+                  I treat <strong>performance, testing and accessibility as engineering requirements</strong> &mdash;
+                  Core Web Vitals budgets, Vitest and Playwright suites, and WCAG checks that run on every pull request.
+                </li>
+                <li>
+                  I <strong>own delivery end to end</strong> &mdash; code review, CI/CD with GitHub Actions, AWS and
+                  Nginx &mdash; and mentor the developers working alongside me.
+                </li>                
+              </ul>
+              <p style="margin: 0">
+                <a href="#ai" style="color: var(--brand-ink); font-weight: 600">See my AI engineering&nbsp;&rarr;</a>
+                &nbsp;&middot;&nbsp;
+                <a href="#contact" style="color: var(--brand-ink); font-weight: 600">Get in touch</a>
+              </p>              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DESIGN / DEVELOP / DEPLOY -->
+      <section id="capabilities">
+        <div class="wrap">
+          <div class="head">
+            <h2>Design &middot; Develop &middot; Deploy</h2>
+            <p>One developer across the entire product lifecycle &mdash; fewer handoffs, faster delivery.</p>
+          </div>
+          <div class="capGrid">
+            <article class="card cap" style="--c1: #c8993a; --c2: #c8993a">
+              <span class="ic"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m12 19 7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"></path>
+                  <circle cx="11" cy="11" r="2"></circle></svg
+              ></span>
+              <h3>Design<small>5 years &middot; UI &amp; graphic design</small></h3>
+              <div class="chips">
+                <span class="chip">Figma</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span>
+              </div>
+              <ul class="ticks">
+                <li>Wireframes to high-fidelity UI mockups and reusable component styles in <strong>Figma</strong></li>
+                <li>
+                  Image editing, branding and web-optimised assets in <strong>Photoshop &amp; Illustrator</strong>
+                </li>
+                <li>Design-to-code handoff &mdash; I build what I design, pixel for pixel</li>
+              </ul>
+            </article>
+
+            <article class="card cap" style="--c1: #1e3a8a; --c2: #7ea3e8">
+              <span class="ic"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"></path></svg
+              ></span>
+              <h3>Development<small>Senior frontend &middot; React &middot; Next.js &middot; TypeScript</small></h3>
+              <div class="chips">
+                <span class="chip">React</span><span class="chip">Next JS</span><span class="chip">TypeScript</span
+                ><span class="chip">Tailwind</span><span class="chip">HTML / CSS</span>
+              </div>
+              <ul class="ticks">
+                <li>
+                  Production <strong>React &amp; Next.js</strong> applications in strict TypeScript, with Tailwind CSS
+                  and Shadcn UI
+                </li>
+                <li>
+                  <strong>Architecture ownership</strong> &mdash; module boundaries, state strategy, typed data layer,
+                  shared component system
+                </li>
+                <li>
+                  <strong>REST &amp; GraphQL</strong> APIs built and consumed &mdash; Node.js, Express and
+                  PostgreSQL / MongoDB behind them
+                </li>
+              </ul>
+            </article>
+
+            <article class="card cap" style="--c1: #1e3a8a; --c2: #6b94dd">
+              <span class="ic"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9-.8-.8-2.1-.8-2.9-.1zM12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2zM9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"
+                  ></path></svg
+              ></span>
+              <h3>Deployment<small>Frontend DevOps &middot; CI/CD</small></h3>
+              <div class="chips">
+                <span class="chip">Git</span><span class="chip">GitHub Actions</span><span class="chip">AWS</span
+                ><span class="chip">Nginx</span>
+              </div>
+              <ul class="ticks">
+                <li>Branching, pull requests and code review with <strong>Git &amp; GitHub</strong></li>
+                <li>Automated build, test and deploy pipelines with <strong>GitHub Actions</strong></li>
+                <li>Hosting on <strong>AWS</strong> with <strong>Nginx</strong> as web server / reverse proxy</li>                
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FRONTEND ARCHITECTURE -->
+      <section id="architecture">
+        <div class="wrap">
+          <div class="head">
+            <h2>Frontend architecture</h2>
+            <p>How I set an app up so it stays fast and easy to work on as the team and the features grow.</p>
+          </div>
+
+          <div class="pillarGrid three">
+            <article class="card pillar">
+              <h3><span class="pn">01</span>Application structure</h3>
+              <ul class="ticks">
+                <li>One folder per feature, with <strong>clear edges</strong> between them</li>
+                <li>Server and client components split on purpose; mutations through <strong>Server Actions</strong></li>
+                <li>TypeScript throughout, so mistakes show up <strong>before the app runs</strong></li>
+              </ul>
+            </article>
+
+            <article class="card pillar">
+              <h3><span class="pn">02</span>State management</h3>
+              <ul class="ticks">
+                <li><strong>Server data and screen state kept apart</strong> &mdash; React Query and Zustand</li>
+                <li>Cached per item, so one change does not reload everything</li>
+                <li>Forms on React Hook Form with a <strong>single Zod schema</strong></li>
+              </ul>
+            </article>
+
+            <article class="card pillar">
+              <h3><span class="pn">03</span>APIs &amp; data layer</h3>
+              <ul class="ticks">
+                <li><strong>One place</strong> that handles auth headers, retries and errors</li>
+                <li>Every response checked, so <strong>bad data fails early</strong> and loudly</li>
+                <li><strong>Suspense and error boundaries</strong> per route, with every state designed up front</li>
+              </ul>
+            </article>
+
+            <article class="card pillar">
+              <h3><span class="pn">04</span>Design system &amp; components</h3>
+              <ul class="ticks">
+                <li><strong>40+ shared components</strong> teams build with instead of rebuilding</li>
+                <li>Tailwind tokens and Shadcn UI, themed light and dark in one place</li>
+                <li>Documented in <strong>Storybook</strong>, with tests and accessibility checks</li>
+              </ul>
+            </article>
+
+            <article class="card pillar">
+              <h3><span class="pn">05</span>Build &amp; tooling</h3>
+              <ul class="ticks">
+                <li><strong>Vite</strong>, or <strong>Turbopack / Webpack</strong> where Next.js needs it</li>
+                <li>Bundle analysed per route, so I split where it <strong>actually matters</strong></li>
+                <li><strong>Turborepo monorepo</strong>, plus SEO metadata, sitemaps and structured data</li>
+              </ul>
+            </article>            
+          </div>
+        </div>
+      </section>
+
+      <!-- PERFORMANCE / CORE WEB VITALS -->
+      <section id="performance">
+        <div class="wrap">
+          <div class="head">
+            <h2>Performance &amp; Core Web Vitals</h2>
+            <p>
+              Performance held to a budget and measured in the field &mdash; not a clean-up sprint after users complain.
+            </p>
+          </div>
+
+          <div class="metricGrid">
+            <div class="card metric">
+              <b>~50%</b><span>Faster LCP</span><small>3.8s &rarr; 1.9s on the heaviest authenticated route</small>
+            </div>
+            <div class="card metric gold">
+              <b>~42%</b><span>Smaller JS bundle</span><small>Route-level splitting and dependency pruning</small>
+            </div>
+            <div class="card metric">
+              <b>95+</b><span>Lighthouse performance</span><small>Enforced as a CI budget, not a one-off score</small>
+            </div>
+            <div class="card metric gold">
+              <b>&lt;0.05</b><span>CLS</span><small>Reserved media space and stable, shift-free layouts</small>
+            </div>
+          </div>
+
+          <div class="pillarGrid">
+            <article class="card pillar">
+              <h3><span class="pn">01</span>How I measure</h3>
+              <ul class="ticks">
+                <li>
+                  <strong>Field Core Web Vitals</strong> (LCP, INP, CLS) via the <code>web-vitals</code> library and RUM
+                  &mdash; real devices and networks, not just a lab run
+                </li>
+                <li>
+                  <strong>Lighthouse CI budgets</strong> wired into the pipeline so a performance regression fails the
+                  build
+                </li>
+                
+                <li>
+                  <strong>React Profiler</strong> passes to locate wasted re-renders and expensive commits
+                </li>
+              </ul>
+            </article>
+
+            <article class="card pillar">
+              <h3><span class="pn">02</span>How I optimise</h3>
+              <ul class="ticks">
+                <li>
+                  <strong>Route-level code splitting</strong>, dynamic imports and swapping heavy dependencies for
+                  lighter equivalents
+                </li>
+                <li>
+                  <strong>Server Components, SSR / ISR and edge caching</strong> to cut client JavaScript and TTFB
+                </li>
+               
+                <li>
+                  <strong>Image and font discipline</strong> &mdash; <code>next/image</code>, responsive
+                  <code>srcset</code>, AVIF / WebP, subsetting and <code>font-display: swap</code>
+                </li>
+                <li>
+                  <strong>Render-path work</strong>: memoisation where it pays, virtualised long lists, debounced
+                  handlers, deferred third-party scripts
+                </li>
+                
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTING / ACCESSIBILITY / CODE REVIEW -->
+      <section id="quality">
+        <div class="wrap">
+          <div class="head">
+            <h2>Testing, accessibility &amp; code review</h2>
+            <p>
+              Quality gates that run on every pull request, so defects are caught in review rather than in production.
+            </p>
+          </div>
+
+          <div class="pillarGrid">
+            <article class="card pillar">
+              <h3><span class="pn">01</span>Testing</h3>
+              <div class="chips">
+                <span class="chip">Vitest</span><span class="chip">React Testing Library</span
+                ><span class="chip">Playwright</span><span class="chip">MSW</span>
+              </div>
+              <ul class="ticks">
+                <li>
+                  Unit and component tests in <strong>Vitest + React Testing Library</strong> &mdash; asserting
+                  behaviour users can observe, not implementation details
+                </li>
+                <li>
+                  Critical journeys covered end to end in <strong>Playwright</strong>, run in CI across Chromium and
+                  WebKit
+                </li>                
+                <li>
+                  Every bug fix ships with a <strong>regression test</strong>; coverage thresholds enforced in the
+                  pipeline
+                </li>
+              </ul>
+            </article>
+
+            <article class="card pillar">
+              <h3><span class="pn">02</span>Accessibility</h3>
+              <div class="chips">
+                <span class="chip">WCAG 2.2 AA</span><span class="chip">ARIA</span
+                ><span class="chip">Screen readers</span>
+              </div>
+              <ul class="ticks">
+                <li>
+                  <strong>Semantic HTML first</strong>, ARIA only where native semantics genuinely fall short
+                </li>
+                <li>
+                  Complete <strong>keyboard paths</strong> with visible focus and managed focus in dialogs, menus and
+                  drawers
+                </li>                
+                <li>
+                  Accessibility written into <strong>acceptance criteria</strong>, so it is built in rather than
+                  retro-fitted
+                </li>
+              </ul>
+            </article>
+
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- BACKEND & DATA -->
+      <section id="backend">
+        <div class="wrap">
+          <div class="head">
+            <h2>Backend &amp; data</h2>
+            <p>The server-side work I own alongside the frontend &mdash; the APIs, the database behind them, and what keeps it quick under load.</p>
+          </div>
+
+          <div class="pillarGrid">
+            <article class="card pillar">
+              <h3><span class="pn">01</span>API design</h3>
+              <div class="chips">
+                <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST</span
+                ><span class="chip">GraphQL</span><span class="chip">OpenAPI</span>
+              </div>
+              <ul class="ticks">
+                <li>Endpoints designed around <strong>resources and clear status codes</strong>, not one-off verbs</li>
+                <li><strong>Versioned</strong>, so old clients keep working when the shape changes</li>
+                <li><strong>Paginated by cursor</strong> on anything that grows, with sensible limits</li>
+                <li>Writes made <strong>idempotent</strong>, so a retry never creates the same thing twice</li>
+                <li>Documented in <strong>OpenAPI</strong>, which also generates the client types</li>
+              </ul>
+            </article>
+
+            <article class="card pillar">
+              <h3><span class="pn">02</span>Databases</h3>
+              <div class="chips">
+                <span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">MySQL</span
+                ><span class="chip">Prisma</span>
+              </div>
+              <ul class="ticks">
+                <li>Schema designed first &mdash; <strong>normalised, with real foreign keys</strong></li>
+                <li><strong>Indexes chosen from the queries</strong> that actually run, then checked with EXPLAIN</li>
+                <li><strong>N+1 queries</strong> found and fixed with joins or batched loads</li>
+                <li>Changes ship as <strong>versioned migrations</strong> &mdash; reversible, and run in CI</li>
+                <li>Transactions where data must move together, so half-finished writes cannot happen</li>
+              </ul>
+            </article>
+
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience">
+        <div class="wrap">
+          <div class="head">
+            <h2>Professional experience</h2>
+          </div>
+          <div class="timeline">
+            <svg class="climb" viewBox="0 0 100 120" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="climbGrad" x1="0" y1="1" x2="1" y2="0">
+                  <stop stop-color="#1e3a8a"></stop>
+                  <stop offset=".5" stop-color="#c8993a"></stop>
+                  <stop offset="1" stop-color="#3b6cc4"></stop>
+                </linearGradient>
+              </defs>
+              <path
+                d="M2.4 84 L36.4 56 L70.5 28"
+                fill="none"
+                stroke="url(#climbGrad)"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-dasharray="7 7"
+                vector-effect="non-scaling-stroke"
+                opacity=".5"
+              ></path>
+            </svg>
+
+            <article class="tl">
+              <span class="bubble" style="background: linear-gradient(140deg, #1e3a8a, #6b94dd)">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="m12 19 7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"></path>
+                </svg>
+              </span>
+              <h3>Designer</h3>
+              <div class="co">Vtnetzwelt, Mohali</div>
+              <div class="when">2015 – 2020 · 5 years</div>
+              <ul class="ticks">
+                <li>
+                  <strong>Owned the visual design</strong> of client web products end to end in
+                  <strong>Photoshop, Illustrator &amp; Figma</strong> &mdash; concept to production-ready assets
+                </li>
+                <li>
+                  Built <strong>reusable UI kits and style libraries</strong> so layouts stayed consistent across
+                  projects instead of being redrawn each time
+                </li>
+                <li>
+                  Standardised handoffs with annotated specs and optimised exports, <strong>cutting design-to-dev
+                  rework</strong> noticeably
+                </li>                
+              </ul>
+            </article>
+
+            <article class="tl">
+              <span class="bubble" style="background: linear-gradient(140deg, #a87a2a, #e0b457)">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                >
+                  <path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"></path>
+                </svg>
+              </span>
+              <h3>UI Developer</h3>
+              <div class="co">Vtnetzwelt, Mohali</div>
+              <div class="when">2020 – 2024 · 4 years</div>
+              <ul class="ticks">
+                <li>
+                  <strong>Owned the UI layer</strong> of client web projects &mdash; responsive, interactive interfaces
+                  in <strong>HTML, CSS &amp; JavaScript</strong>, pixel-accurate to the design
+                </li>
+                <li>
+                  Replaced copy-pasted markup with a <strong>shared component and utility layer</strong>, which cut the
+                  build time for each new page substantially
+                </li>
+                <li>
+                  Drove <strong>page-performance and cross-browser fixes</strong> &mdash; lighter assets, fewer layout
+                  shifts, consistent rendering across browsers and devices
+                </li>
+                <li>
+                  Moved the team's delivery to <strong>React and TypeScript from 2021</strong>, rebuilding legacy pages
+                  as reusable components
+                </li>
+                <li>
+                  Worked day to day with <strong>backend developers on API contracts</strong>, and with designers on what
+                  was realistic to build
+                </li>
+              </ul>
+            </article>
+
+            <article class="tl green">
+              <span class="bubble" style="background: linear-gradient(140deg, #1e3a8a, #3b6cc4)">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 21V6l7-3v18M11 21h9V10h-9"></path>
+                </svg>
+              </span>
+              <h3>Senior Frontend Developer</h3>
+              <div class="co">Vtnetzwelt, Mohali</div>
+              <div class="when">Oct 2024 – Present · 2+ years</div>
+              <ul class="ticks">
+                <li>
+                  <strong>Own the frontend architecture</strong> of production React / Next.js products used by
+                  <strong>50k+ monthly users</strong> &mdash; module boundaries, state strategy, typed API layer and the
+                  shared component system
+                </li>
+                <li>
+                  Led the performance programme: <strong>LCP down ~50% (3.8s &rarr; 1.9s)</strong> and
+                  <strong>JS bundle down ~42%</strong> via code splitting, image/font optimisation and dependency pruning
+                </li>
+                <li>
+                  Introduced <strong>Vitest + Playwright</strong> suites and a PR review checklist &mdash;
+                  <strong>production defects down ~35%</strong>
+                </li>
+                <li>
+                  Built and maintain a <strong>40+ component design system</strong> (WCAG 2.2 AA) reused across products
+                </li>
+                <li>
+                  Work across the stack where needed &mdash; <strong>Node / Express APIs, PostgreSQL and MongoDB</strong>
+                  &mdash; and own release through <strong>GitHub Actions CI/CD, AWS &amp; Nginx</strong>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPACT &amp; LEADERSHIP -->
+      <section id="achievements">
+        <div class="wrap">
+          <div class="head">
+            <h2>Impact &amp; leadership</h2>
+            <p>
+              What changed because of the work &mdash; measured against where each codebase and team started.
+            </p>
+          </div>
+
+          <div class="achGrid">
+            <article class="card ach">
+              <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9-.8-.8-2.1-.8-2.9-.1zM12 15l-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22 22 0 0 1-4 2z"></path></svg></span>
+              <div>
+                <b>Reduced LCP by ~50%</b>
+                <span>
+                  3.8s &rarr; 1.9s on the heaviest route. Server Components, route-level splitting and image / font
+                  optimisation took Core Web Vitals green in the field.
+                </span>
+              </div>
+            </article>
+
+            <article class="card ach gold">
+              <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5 9-5zM3.3 7.3 12 12l8.7-4.7M12 12v9"></path></svg></span>
+              <div>
+                <b>Cut JS bundle by ~42%</b>
+                <span>
+                  Checked every page, split the code so each one loads only what it needs, and replaced the heaviest
+                  chart and date libraries.
+                </span>
+              </div>
+            </article>
+
+            <article class="card ach">
+              <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg></span>
+              <div>
+                <b>Production bugs down ~35%</b>
+                <span>
+                  Vitest and Playwright gates plus a PR review checklist caught defects in review instead of in
+                  release &mdash; and every fix shipped with a regression test.
+                </span>
+              </div>
+            </article>
+
+            <article class="card ach gold">
+              <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span>
+              <div>
+                <b>Built a 40+ component design system</b>
+                <span>
+                  An accessible, themed design system adopted across products &mdash; feature teams compose from it
+                  rather than rebuilding UI per project.
+                </span>
+              </div>
+            </article>
+
+            <article class="card ach">
+              <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></span>
+              <div>
+                <b>Delivered on time, consistently</b>
+                <span>
+                  Automated deployments, honest estimates, and problems raised early &mdash; so there is time to adjust
+                  instead of slipping the date.
+                </span>
+              </div>
+            </article>
+
+            <article class="card ach gold">
+              <span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19 7-7 3 3-7 7zM18 13l-1.5-7.5L2 2l3.5 14.5L13 18zM2 2l7.6 7.6"></path><circle cx="11" cy="11" r="2"></circle></svg></span>
+              <div>
+                <b>Design in Figma, then build it</b>
+                <span>
+                  I design the screens myself and develop them in React &mdash; no handoff gap, no "that is not what
+                  the design said", and fewer review rounds.
+                </span>
+              </div>
+            </article>
+          </div>
+
+          <div class="card sk" style="margin-top: 22px">
+            <h3><i></i>Leadership, process &amp; collaboration</h3>
+            <ul class="ticks">              
+              <li>
+                Work in <strong>Scrum sprints</strong> &mdash; refinement, planning, stand-ups, review and
+                retro, tracked in <strong>Jira</strong>
+              </li>                            
+              <li>
+                Work with <strong>design</strong> from the wireframe stage, so what gets drawn is what can actually be
+                built and maintained
+              </li>              
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI PRODUCT ENGINEERING -->
+      <section id="ai" class="aiSec">
+        <div class="wrap">
+          <div class="head">
+            <h2>AI Product Engineering</h2>
+            <p>I build AI into products, not just into my editor. Four things I work with:</p>
+          </div>
+
+          <div class="aiGrid two">
+            <article class="aiCard">
+              <header>
+                <span class="num">01</span>
+                <h3>LLM integration</h3>
+              </header>
+              <ul class="ticks">
+                <li><strong>Streaming UI</strong> with stop, regenerate and a clean failure state</li>
+                <li><strong>Schema-enforced JSON output</strong>, validated before it reaches the UI</li>
+                <li>Versioned prompts, with token and cost budgets per feature</li>
+                <li><strong>Model picked per job</strong> &mdash; the cheap fast one unless the task needs the strong one</li>
+              </ul>
+            </article>
+
+            <article class="aiCard">
+              <header>
+                <span class="num">02</span>
+                <h3>RAG pipelines</h3>
+              </header>
+              <ul class="ticks">
+                <li><strong>Chunk size and overlap tuned per document type</strong>, not one setting for all</li>
+                <li>Embeddings kept in <strong>Postgres with pgvector</strong> &mdash; model and dimensions chosen for cost, not defaults</li>
+                <li><strong>Hybrid search</strong> (vector + keyword) with reranking for precision</li>
+                <li>Answers that carry <strong>citations</strong> back to the source</li>
+              </ul>
+            </article>
+
+            <article class="aiCard">
+              <header>
+                <span class="num">03</span>
+                <h3>Agents &amp; tool use</h3>
+              </header>
+              <ul class="ticks">
+                <li>Typed tools the model can call reliably</li>
+                <li><strong>Bounded loops</strong> &mdash; retry and step limits, no runaway cost</li>
+                <li><strong>Human approval</strong> before any write</li>
+              </ul>
+            </article>
+
+            <article class="aiCard">
+              <header>
+                <span class="num">04</span>
+                <h3>MCP servers</h3>
+              </header>
+              <ul class="ticks">
+                <li>Expose internal tools and data to models over <strong>MCP</strong></li>
+                <li><strong>Scoped permissions</strong> per tool &mdash; least privilege by default</li>
+                <li><strong>Audit logging</strong>, so every model action is traceable</li>
+              </ul>
+            </article>
+          </div>
+
+        
+
+          
+        </div>
+      </section>
+
+      <!-- AI-ASSISTED DELIVERY WORKFLOW -->
+      <section id="ai-workflow">
+        <div class="wrap">
+          <div class="head">
+            <h2>AI-assisted delivery workflow</h2>
+            <p>AI helps at every step of how I deliver. I write the prompt, check the output, and prove it with tests.</p>
+          </div>
+          <div class="pillarGrid three">
+            <article class="card pillar">
+              <header>
+                <span class="pn">01</span>
+                <h3>Plan</h3>
+              </header>
+              <p>Break the requirement into tasks, options and edge cases before any code is written.</p>
+            </article>
+
+            <article class="card pillar">
+              <header>
+                <span class="pn">02</span>
+                <h3>Build</h3>
+              </header>
+              <p>Pair on components, hooks and boilerplate &mdash; and read every line before it lands.</p>
+            </article>
+
+            <article class="card pillar">
+              <header>
+                <span class="pn">03</span>
+                <h3>Test</h3>
+              </header>
+              <p>Draft unit and edge-case tests fast, then fix the assertions by hand so they check real behaviour.</p>
+            </article>
+
+            <article class="card pillar">
+              <header>
+                <span class="pn">04</span>
+                <h3>Debug</h3>
+              </header>
+              <p>Work through errors and stack traces to find the real cause, not just the symptom.</p>
+            </article>
+
+            <article class="card pillar">
+              <header>
+                <span class="pn">05</span>
+                <h3>Review</h3>
+              </header>
+              <p>A second pass over every pull request for bugs, security, accessibility and performance.</p>
+            </article>
+
+            <article class="card pillar">
+              <header>
+                <span class="pn">06</span>
+                <h3>Ship</h3>
+              </header>
+              <p>Draft CI/CD configs, READMEs and PR notes &mdash; each one checked before it goes out.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASE STUDIES -->
+      <section id="case-studies">
+        <div class="wrap">
+          <div class="head">
+            <h2>Case studies</h2>
+            <p>Three problems I was handed, what I changed, and what it moved.</p>
+          </div>
+
+          <div class="csGrid">
+            <article class="card cs">
+              <div class="csHead">
+                <span class="csNum">CASE 01</span>
+                <h3>Large React application architecture</h3>
+                <span class="badge">React &middot; TypeScript &middot; React Query</span>
+                <span class="badge v">~120 screens &middot; 4 squads</span>
+              </div>
+
+              <div class="csBlock">
+                <b>The problem</b>
+                <ul class="ticks">
+                  <li>Four squads shared one codebase with <strong>no agreed structure</strong></li>
+                  <li>The same data was stored in <strong>three places at once</strong>, and the copies drifted apart</li>
+                  <li>Every release broke screens <strong>nobody had touched</strong></li>
+                  <li>UI was rebuilt from scratch on each screen instead of reused</li>
+                </ul>
+              </div>
+
+              <div class="csBlock">
+                <b>What I did</b>
+                <ul class="ticks">
+                  <li>Split the app into <strong>feature slices</strong> with explicit public APIs</li>
+                  <li>Moved server data to <strong>React Query</strong>, UI state to <strong>Zustand</strong></li>
+                  <li>Put every request behind <strong>one typed API layer</strong> with checked responses</li>
+                  <li>Built a <strong>shared component library</strong> and review rules to keep it used</li>
+                </ul>
+              </div>
+
+              <div class="csResult">
+                <span class="kv">Regressions down ~35%</span>
+                <span class="kv">40+ shared components</span>
+                <span class="kv">Onboarding time roughly halved</span>
+              </div>
+            </article>
+
+            <article class="card cs">
+              <div class="csHead">
+                <span class="csNum">CASE 02</span>
+                <h3>Next.js performance optimisation</h3>
+                <span class="badge v">Next.js &middot; Core Web Vitals &middot; Lighthouse CI</span>
+              </div>
+
+              <div class="csBlock">
+                <b>The problem</b>
+                <ul class="ticks">
+                  <li>The main content took <strong>3.8 seconds to appear</strong> on a normal phone</li>
+                  <li>Chart and date libraries loaded on <strong>pages that never used them</strong></li>
+                  <li>Images and fonts had no reserved space, so the <strong>layout jumped</strong> while loading</li>
+                  <li>Nothing caught it when a change made the site slower</li>
+                </ul>
+              </div>
+
+              <div class="csBlock">
+                <b>What I did</b>
+                <ul class="ticks">
+                  <li>Moved data-heavy routes to <strong>Server Components with ISR</strong></li>
+                  <li>Split the bundle per route and replaced the <strong>heaviest libraries</strong></li>
+                  <li>Fixed images and fonts &mdash; <strong>next/image, AVIF, subsetting</strong>, reserved space</li>
+                  <li>Added <strong>Lighthouse CI budgets</strong> so a slow change fails the build</li>
+                </ul>
+              </div>
+
+              <div class="csResult">
+                <span class="kv">LCP 3.8s &rarr; 1.9s</span>
+                <span class="kv">Bundle &minus;42%</span>
+                <span class="kv">CLS &lt; 0.05</span>
+                <span class="kv">Lighthouse 95+</span>
+              </div>
+            </article>
+
+            <article class="card cs">
+              <div class="csHead">
+                <span class="csNum">CASE 03</span>
+                <h3>AI-powered application</h3>
+                <span class="badge">LLM &middot; RAG &middot; Agents &middot; MCP</span>
+              </div>
+
+              <div class="csBlock">
+                <b>The problem</b>
+                <ul class="ticks">
+                  <li>Users needed answers from <strong>their own documents</strong>, not general knowledge</li>
+                  <li>The model <strong>made things up</strong> and showed no sources to check</li>
+                  <li>There was <strong>no safe way</strong> to let it change anything in internal systems</li>
+                  <li>Every answer went through the <strong>strongest, most expensive model</strong></li>
+                </ul>
+              </div>
+
+              <div class="csBlock">
+                <b>What I did</b>
+                <ul class="ticks">
+                  <li>Built a <strong>RAG pipeline</strong> that returns answers <strong>with citations</strong></li>
+                  <li>Stored embeddings in <strong>Postgres with pgvector</strong>, searched vector + keyword</li>
+                  <li>Added a <strong>tool-calling agent</strong> that asks for approval before any write</li>
+                  <li>Routed simple questions to a <strong>cheaper, faster model</strong></li>
+                </ul>
+              </div>
+
+              <div class="csResult">                
+                <span class="kv">Human approval on writes</span>                
+                <span class="kv">Token cost down ~60%</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="wrap">
+          <div class="head">
+            <h2>Featured projects</h2>
+            <p>
+              What I built on each one, and the part that was actually hard. The covers are original portfolio artwork
+              created to represent each project.
+            </p>
+          </div>
+
+          <div class="railWrap">
+            <button class="arw l" id="prev" aria-label="Previous projects" disabled="">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              >
+                <path d="m14 6-6 6 6 6"></path>
+              </svg>
+            </button>
+            <button class="arw r" id="next" aria-label="Next projects">
+              <svg
+                width="17"
+                height="17"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+              >
+                <path d="m10 6 6 6-6 6"></path>
+              </svg>
+            </button>
+
+            <div class="rail" id="rail">
+              <article class="proj">
+                <div class="pmedia">
+                  <div
+                    class="cover"
+                    style="--c1: #38bdf8; --c2: #818cf8"
+                    role="img"
+                    aria-label="ARTMO portfolio artwork"
+                  >
+                    <span class="cnum">01</span>
+                    <span class="ctext"><b>ARTMO</b><em>E-commerce</em><span>React.js</span></span>
+                    <span class="cui"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="plogo">AR</span>
+                </div>
+                <div class="pb">
+                  <h3>ARTMO</h3>
+                  <span class="badge">React.js</span>
+                  <p>
+                    Art marketplace and social network. I built the artwork browse, search and checkout screens in
+                    React, plus the shared component set the rest of the app uses.
+                  </p>
+                  <a href="https://www.artmo.com/" target="_blank" rel="noopener">View project →</a>
+                </div>
+              </article>
+
+              <article class="proj">
+                <div class="pmedia">
+                  <div
+                    class="cover"
+                    style="--c1: #6b94dd; --c2: #3b82f6"
+                    role="img"
+                    aria-label="YouGov portfolio artwork"
+                  >
+                    <span class="cnum">02</span>
+                    <span class="ctext"
+                      ><b>YOUGOV</b><em>Market Research</em
+                      ><span>YouGov Shopper — Market Research & Consumer Insights Platform</span></span
+                    >
+                    <span class="cui"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="plogo">YG</span>
+                </div>
+                <div class="pb">
+                  <h3>YOUGOV</h3>
+                  <span class="badge">Svelte</span>
+                  <p>
+                    Consumer insights platform. I built the survey and reporting UI in Svelte &mdash; large data tables,
+                    filters and charts kept responsive on slow connections.
+                  </p>
+                  <a href="https://shopper.yougov.com/auth/en-gb/login" target="_blank" rel="noopener"
+                    >View project →</a
+                  >
+                </div>
+              </article>
+
+              <article class="proj">
+                <div class="pmedia">
+                  <div
+                    class="cover"
+                    style="--c1: #34d399; --c2: #6b94dd"
+                    role="img"
+                    aria-label="Sparkfive portfolio artwork"
+                  >
+                    <span class="cnum">03</span>
+                    <span class="ctext"
+                      ><b>SPARKFIVE</b><em>Digital Assets</em><span>Digital Asset Management Platform</span></span
+                    >
+                    <span class="cui"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="plogo">SF</span>
+                </div>
+                <div class="pb">
+                  <h3>SPARKFIVE</h3>
+                  <span class="badge">React.js</span>
+                  <p>
+                    Digital asset management tool. I built the asset library in React &mdash; bulk upload, tagging and a
+                    virtualised grid that stays smooth with thousands of files.
+                  </p>
+                  <a href="https://www.sparkfive.com/" target="_blank" rel="noopener">View project →</a>
+                </div>
+              </article>
+
+              <article class="proj">
+                <div class="pmedia">
+                  <div
+                    class="cover"
+                    style="--c1: #f472b6; --c2: #818cf8"
+                    role="img"
+                    aria-label="MindPeer portfolio artwork"
+                  >
+                    <span class="cnum">04</span>
+                    <span class="ctext"
+                      ><b>MINDPEER</b><em>Health Tech</em><span>Mental Health Platform</span></span
+                    >
+                    <span class="cui"><i></i><i></i><i></i><i></i></span>
+                  </div>
+                  <span class="plogo">MP</span>
+                </div>
+                <div class="pb">
+                  <h3>MINDPEER</h3>
+                  <span class="badge v">Angular</span>
+                  <p>
+                    Mental health platform. I built patient-facing booking and assessment flows in Angular, with
+                    accessible forms and careful handling of sensitive data.
+                  </p>
+                  <a href="https://mindpeer.ai/" target="_blank" rel="noopener">View project →</a>
+                </div>
+              </article>              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS / EDUCATION -->
+      <section id="skills">
+        <div class="wrap">
+          <div class="head">
+            <h2>Technical skills</h2>
+          </div>
+          <div class="skillGrid">
+            <div class="card sk">
+              <h3><i></i>Design &amp; UI</h3>
+              <div class="chips">
+                <span class="chip">Figma</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span
+                ><span class="chip">UI / UX</span><span class="chip">Responsive design</span>
+              </div>
+            </div>
+            <div class="card sk">
+              <h3><i></i>Core Engineering</h3>
+              <div class="chips">
+                <span class="chip">TypeScript</span><span class="chip">JavaScript (ES2023+)</span
+                ><span class="chip">React 19</span><span class="chip">Next.js (App Router)</span
+                ><span class="chip">Server Actions</span><span class="chip">Suspense &amp; error boundaries</span
+                ><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Tailwind CSS</span
+                ><span class="chip">Shadcn UI</span><span class="chip">React Form</span
+                ><span class="chip">Framer Motion</span><span class="chip">Angular (working knowledge)</span>
+              </div>
+            </div>
+            <div class="card sk">
+              <h3><i></i>Architecture</h3>
+              <div class="chips">
+                <span class="chip">Component architecture</span><span class="chip">Feature-sliced structure</span
+                ><span class="chip">React Query</span><span class="chip">Redux Toolkit</span
+                ><span class="chip">Zustand</span><span class="chip">Zod validation</span
+                ><span class="chip">Design systems</span><span class="chip">SSR / SSG / ISR / PPR</span
+                ><span class="chip">Vite / Webpack</span
+                ><span class="chip">SEO (metadata, sitemaps)</span>
+              </div>
+            </div>
+            <div class="card sk">
+              <h3><i></i>Backend &amp; APIs (working knowledge)</h3>
+              <div class="chips">
+                <span class="chip">REST</span><span class="chip">GraphQL</span><span class="chip">Node.js</span
+                ><span class="chip">Express</span><span class="chip">JWT / OAuth</span
+                ><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">MySQL</span
+                ><span class="chip">Prisma</span><span class="chip">Redis</span
+                >
+              </div>
+            </div>
+            <div class="card sk">
+              <h3><i></i>Quality &amp; Performance</h3>
+              <div class="chips">
+                <span class="chip">Vitest</span><span class="chip">Jest</span
+                ><span class="chip">React Testing Library</span><span class="chip">Playwright</span
+                ><span class="chip">Storybook</span
+                ><span class="chip">Core Web Vitals</span
+                ><span class="chip">Lighthouse CI</span><span class="chip">WCAG 2.2 AA / axe</span
+                ><span class="chip">Code review</span><span class="chip">ESLint / Prettier</span>
+              </div>
+            </div>
+            <div class="card sk">
+              <h3><i></i>Cloud &amp; DevOps</h3>
+              <div class="chips">
+                <span class="chip">Git / GitHub</span><span class="chip">GitHub Actions (CI/CD)</span
+                ><span class="chip">AWS (S3, EC2)</span><span class="chip">Nginx</span
+                ><span class="chip">Docker</span>
+              </div>
+            </div>
+            
+            <div class="card sk" style="grid-column: span 3">
+              <h3><i></i>AI Engineering</h3>
+              <div class="chips">
+                <span class="chip ai">Claude / OpenAI APIs</span><span class="chip ai">Prompt engineering</span
+                ><span class="chip ai">Structured outputs</span><span class="chip ai">RAG pipelines</span
+                ><span class="chip ai">Agents &amp; tool calling</span><span class="chip ai">MCP servers</span
+                ><span class="chip ai">AI test generation</span><span class="chip ai">AI code review</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="band">
+            <div id="education">
+              <h3>Education</h3>
+              <div class="edu">
+                <span class="ic">🎓</span>
+                <div>
+                  <b>BCA</b>
+                  <span>Punjab Technical University, Chandigarh</span>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3>Languages</h3>
+              <div class="edu">
+                <span class="ic">🗣</span>
+                <div>
+                  <b>English · Hindi · Punjabi</b>
+                  <span>Professional and native fluency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <div class="wrap">
+          <div class="head">
+            <h2>Get in touch</h2>
+            <p>
+              Have an architecture, performance or AI-product problem to solve, or a senior frontend role to discuss?
+              Reach out on any channel below &mdash; I’ll get back to you within a day.
+            </p>
+          </div>
+
+          <div class="contactGrid">
+            <div class="card cInfo">
+              <h3>Contact details</h3>
+
+              <p>Prefer something direct? Reach me on any of these.</p>
+
+              <!-- ROW 1 -->
+              <div class="contactRow">
+                <!-- WhatsApp -->
+                <a
+                  class="cRow wa"
+                  href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <span class="ic">
+                    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>WhatsApp</small>
+                    <b>Chat on +91 97809 99700</b>
+                  </span>
+                </a>
+
+                <!-- Email -->
+                <a class="cRow" href="mailto:vikasdeveloper786@gmail.com">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+
+                      <path d="m3 7 9 6 9-6"></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>Email</small>
+                    <b>vikasdeveloper786@gmail.com</b>
+                  </span>
+                </a>
+              </div>
+
+              <!-- ROW 2 -->
+              <div class="contactRow">
+                <!-- Phone -->
+                <a class="cRow" href="tel:+919780999700">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path
+                        d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>Phone</small>
+                    <b>+91 97809 99700</b>
+                  </span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a class="cRow" href="https://in.linkedin.com/in/vikas-arora-5b83a019" target="_blank" rel="noopener">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.7c0-1.36-.03-3.11-1.9-3.11-1.9 0-2.2 1.48-2.2 3.01V21h-4V9Z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>LinkedIn</small>
+                    <b>vikas-arora</b>
+                  </span>
+                </a>
+              </div>
+
+              <!-- ROW 3 -->
+              <div class="contactRow">
+                <!-- GitHub -->
+                <a class="cRow" href="https://github.com/vikasdeveloper786" target="_blank" rel="noopener">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.12 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                      ></path>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>GitHub</small>
+                    <b>vikasdeveloper786</b>
+                  </span>
+                </a>
+
+                <!-- Location -->
+                <div class="cRow" style="cursor: default">
+                  <span class="ic">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"></path>
+
+                      <circle cx="12" cy="10" r="2.6"></circle>
+                    </svg>
+                  </span>
+
+                  <span>
+                    <small>Location</small>
+                    <b>Zirakpur, Mohali Punjab</b>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="fGrid">
+          <div>
+            <a class="brand" href="#home" style="color: #fff">
+              <img src="./vikas-resume/tm-logo.svg" alt="" />
+              <span><b>VIKAS ARORA</b><small style="color: #8fa5c2">Senior Frontend Developer</small></span>
+            </a>
+            <p style="margin-top: 16px">
+              Frontend architecture, performance and quality engineering in React / Next.js &mdash; plus AI product
+              features built to ship, not to demo.
+            </p>
+            <div class="fSocial">
+              <a
+                class="icoBtn"
+                href="https://in.linkedin.com/in/vikas-arora-5b83a019"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.7c0-1.36-.03-3.11-1.9-3.11-1.9 0-2.2 1.48-2.2 3.01V21h-4V9Z"
+                  ></path></svg
+              ></a>
+              <a
+                class="icoBtn"
+                href="https://github.com/vikasdeveloper786"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.5 9.5 0 0 1 12 6.8c.85 0 1.71.12 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"
+                  ></path></svg
+              ></a>
+              <a
+                class="icoBtn wa"
+                href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+              >
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+                  ></path></svg
+              ></a>
+              <a class="icoBtn" href="mailto:vikasdeveloper786@gmail.com" aria-label="Email">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="m3 7 9 6 9-6"></path></svg
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h4>Quick links</h4>
+            <nav class="fLinks">
+              <a href="#home">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a
+              ><a href="./vikas-resume/resume-vikasarora.pdf" download="" target="_blank">Resume</a>
+            </nav>
+          </div>
+
+          <div>
+            <h4>Let's connect</h4>
+            <div class="fContact">
+              <div>
+                <span class="ic"
+                  ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="m3 7 9 6 9-6"></path></svg
+                ></span>
+                <a href="mailto:vikasdeveloper786@gmail.com">vikasdeveloper786@gmail.com</a>
+              </div>
+              <div>
+                <span class="ic"
+                  ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"
+                    ></path></svg
+                ></span>
+                <a href="tel:+919780999700">+91 97809 99700</a>
+              </div>
+              <div>
+                <span class="ic" style="color: #25d366"
+                  ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+                    ></path></svg
+                ></span>
+                <a
+                  href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noopener"
+                  >Chat on WhatsApp</a
+                >
+              </div>
+              <div>
+                <span class="ic"
+                  ><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"></path>
+                    <circle cx="12" cy="10" r="2.6"></circle></svg
+                ></span>
+                Zirakpur, Mohali Punjab
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fBottom">
+          <span>© <span id="yr">2026</span> Vikas Arora. All rights reserved.</span>
+          <span>Senior Frontend Developer</span>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      id="waFab"
+      href="https://wa.me/919780999700?text=Hi%20Vikas%2C%20I%27d%20like%20to%20discuss%20a%20project."
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+      title="Chat on WhatsApp"
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+        <path
+          d="M12.04 2C6.6 2 2.18 6.42 2.18 11.86c0 1.74.46 3.44 1.32 4.94L2.1 22l5.34-1.38a9.83 9.83 0 0 0 4.6 1.16h.01c5.43 0 9.85-4.42 9.85-9.86A9.79 9.79 0 0 0 12.04 2Zm0 18.02h-.01a8.2 8.2 0 0 1-4.15-1.13l-.3-.18-3.08.8.82-3-.19-.31a8.15 8.15 0 0 1-1.26-4.34c0-4.52 3.68-8.19 8.2-8.19a8.14 8.14 0 0 1 8.18 8.2c0 4.52-3.68 8.15-8.21 8.15Zm4.5-6.1c-.25-.13-1.46-.72-1.68-.8-.23-.08-.39-.13-.56.12-.16.25-.64.8-.78.97-.15.16-.29.18-.53.06-.25-.13-1.04-.39-1.99-1.23-.73-.66-1.23-1.46-1.38-1.71-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.44.13-.15.17-.25.25-.42.09-.16.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05s.88 2.38 1 2.54c.13.17 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"
+        ></path>
+      </svg>
+    </a>
+
+    <button id="top" aria-label="Back to top">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.4"
+        stroke-linecap="round"
+      >
+        <path d="M12 19V6m0 0-6 6m6-6 6 6"></path>
+      </svg>
+    </button>
+
+    <script>
+      document.getElementById("yr").textContent = new Date().getFullYear();
+
+      /* theme */
+      const root = document.documentElement;
+      document.getElementById("themeBtn").addEventListener("click", () => {
+        root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      });
+
+      /* mobile menu */
+      const burger = document.getElementById("burger"),
+        menu = document.getElementById("menu");
+      burger.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        burger.setAttribute("aria-expanded", open);
+      });
+      menu.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") menu.classList.remove("open");
+      });
+
+      /* projects carousel */
+      const rail = document.getElementById("rail");
+      const prev = document.getElementById("prev"),
+        next = document.getElementById("next");
+
+      function syncArrows() {
+        const max = rail.scrollWidth - rail.clientWidth - 2;
+        const off = max <= 0;
+        prev.disabled = off || rail.scrollLeft <= 2;
+        next.disabled = off || rail.scrollLeft >= max;
+      }
+      function step() {
+        const card = rail.querySelector(".proj:not([hidden])");
+        return card ? card.getBoundingClientRect().width + 20 : 300;
+      }
+      prev.addEventListener("click", () => rail.scrollBy({ left: -step() * 2, behavior: "smooth" }));
+      next.addEventListener("click", () => rail.scrollBy({ left: step() * 2, behavior: "smooth" }));
+      rail.addEventListener("scroll", syncArrows, { passive: true });
+      addEventListener("resize", syncArrows);
+
+      syncArrows();
+
+      /* active nav link + back to top */
+      const sections = [...document.querySelectorAll("section[id]")];
+      const links = [...document.querySelectorAll(".menu a")];
+      const topBtn = document.getElementById("top");
+      topBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+      addEventListener(
+        "scroll",
+        () => {
+          topBtn.classList.toggle("show", scrollY > 500);
+          const y = scrollY + 140;
+          let id = sections[0].id;
+          for (const s of sections) if (s.offsetTop <= y) id = s.id;
+          links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + id));
+        },
+        { passive: true },
+      );
+    </script>
+  </body>
+</html>
